@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');</script>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#17231C"/><text x="100" y="128" text-anchor="middle" font-family="Impact, Arial Narrow, sans-serif" font-size="88" font-weight="900" fill="#C4501F">SOV</text></svg></template>
+<style>
+html, body { margin:0; padding:0; background:#F3EFE4; color:#17231C; font-family:'Source Serif 4', Georgia, serif; -webkit-font-smoothing:antialiased; }
+* { box-sizing:border-box; }
+a { color:#2F6E87; text-decoration-color:#B9C9CF; text-underline-offset:3px; }
+a:hover { color:#C4501F; text-decoration-color:#C4501F; }
+button { font:inherit; cursor:pointer; }
+input, select, textarea { font:inherit; color:inherit; }
+input::placeholder, textarea::placeholder { color:#8A938D; }
+@keyframes rise { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:none; } }
+@keyframes pulse { 0%,100% { box-shadow:0 0 0 0 rgba(196,80,31,.45); } 70% { box-shadow:0 0 0 14px rgba(196,80,31,0); } }
+@keyframes glow { 0% { box-shadow:0 20px 60px rgba(0,0,0,.35), 0 0 0 0 rgba(196,80,31,0); } 30% { box-shadow:0 20px 60px rgba(0,0,0,.35), 0 0 0 7px rgba(196,80,31,.6); } 100% { box-shadow:0 20px 60px rgba(0,0,0,.35), 0 0 0 0 rgba(196,80,31,0); } }
+@keyframes drift { from { background-position:0 0; } to { background-position:120px 0; } }
+</style>
+</helmet>
+
+<div style="min-height:100vh; display:flex; flex-direction:column;">
+
+<!-- ================= EN ================= -->
+<sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+<div data-screen-label="EN">
+
+<header style="position:sticky; top:0; z-index:50; background:rgba(243,239,228,.92); backdrop-filter:blur(8px); border-bottom:1px solid #D9D2C1;">
+  <div data-progress style="position:absolute; left:0; bottom:-1px; height:3px; width:0%; background:#C4501F; transition:width .12s linear; pointer-events:none;"></div>
+  <div style="max-width:1160px; margin:0 auto; padding:10px 20px; display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+    <a href="#top" style="text-decoration:none; color:#17231C; display:flex; align-items:baseline; gap:10px; flex:1; min-width:0;">
+      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:24px; letter-spacing:.02em; text-transform:uppercase;">Save Our Valley</span>
+      <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}"><span style="font-size:13px; color:#5B6660; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Stop the sprawl. Save Silver Creek.</span></sc-if>
+    </a>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div style="display:flex; border:1px solid #D9D2C1; border-radius:999px; overflow:hidden; font-size:13px; font-weight:600;">
+        <button onClick="{{ setEn }}" style="border:0; padding:6px 12px; background:#17231C; color:#F3EFE4;">EN</button>
+        <button onClick="{{ setEs }}" style="border:0; padding:6px 12px; background:transparent; color:#17231C;">ES</button>
+      </div>
+      <a href="#letter" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:17px; letter-spacing:.03em; text-transform:uppercase; padding:9px 16px; border-radius:6px; white-space:nowrap;">{{ headerCta }}</a>
+    </div>
+  </div>
+</header>
+
+<section id="top" data-screen-label="Hero" style="max-width:1160px; width:100%; margin:0 auto; padding:clamp(28px, 5vw, 56px) 20px 40px; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:clamp(20px, 4vw, 36px); align-items:center;">
+  <div>
+    <p style="margin:0 0 18px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600; animation:rise .6s ease both;">Hailey, Idaho · Blaine Crossing annexation</p>
+    <h1 style="margin:0 0 22px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.9; letter-spacing:-.01em; font-size:clamp(52px, 11vw, 120px); animation:rise .7s .08s ease both;">108 acres.<br><span data-count="614">614</span> homes.<br><span style="color:#C4501F;">Three votes.</span></h1>
+    <p style="margin:0 0 28px; font-size:clamp(17px, 1.6vw, 20px); line-height:1.5; max-width:560px; text-wrap:pretty; animation:rise .7s .16s ease both;">Oppenheimer Development Corp. wants the City of Hailey to annex 108 acres of Flying Hat Ranch between Hailey and Bellevue: 614 housing units, 280,000 square feet of industrial space, retail, and a 100-room hotel. The Hailey City Council decides. Your email goes on the official record.</p>
+    <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; animation:rise .7s .24s ease both;">
+      <a href="#letter" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:22px; letter-spacing:.03em; text-transform:uppercase; padding:14px 24px; border-radius:6px; animation:pulse 2.4s 1.2s ease-out 3;">Email the council · 2 minutes</a>
+      <a href="#stakes" style="text-decoration:none; color:#17231C; font-family:'Barlow Condensed'; font-weight:700; font-size:22px; letter-spacing:.03em; text-transform:uppercase; padding:14px 18px; border:1.5px solid #17231C; border-radius:6px;">What's at stake</a>
+    </div>
+    <sc-if value="{{ showCount }}" hint-placeholder-val="{{ false }}">
+      <p style="margin:20px 0 0; font-size:15px; color:#4F6B4E; font-weight:600;">{{ countText }}</p>
+    </sc-if>
+  </div>
+  <div style="position:relative; aspect-ratio:4/5; max-height:min(620px, 70vh); animation:rise .8s .2s ease both;">
+    <image-slot id="hero-creek" shape="rounded" radius="14" placeholder="Drop a photo: Silver Creek or Flying Hat Ranch at dusk" src="https://bloximages.chicago2.vip.townnews.com/mtexpress.com/content/tncms/assets/v3/editorial/0/9a/09a891e9-b18e-4587-bd28-a25fe1ee541b/6643bda1233d5.image.jpg?resize=1000%2C1250&order=resize" credit="Photo: Idaho Mountain Express (placeholder, permission pending)" credit-href="https://www.mtexpress.com/news/hailey/water-concerns-raised-ahead-of-blaine-crossing-open-house/article_7960f431-1cd5-4e8c-a690-011025b87850.html"></image-slot>
+    <div style="position:absolute; left:14px; bottom:14px; right:14px; display:flex; justify-content:flex-end; pointer-events:none;">
+      <span style="background:rgba(23,35,28,.82); color:#F3EFE4; font-size:13px; padding:6px 10px; border-radius:4px;">Flying Hat Ranch, east of Highway 75</span>
+    </div>
+  </div>
+</section>
+
+<section id="letter" data-screen-label="Letter tool" style="background:#17231C; color:#F3EFE4; padding:64px 20px 72px;">
+  <div style="max-width:1160px; margin:0 auto;">
+    <div style="max-width:720px; margin-bottom:36px;">
+      <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#A9C1A5; font-weight:600;">Two minutes. Every address that matters.</p>
+      <h2 style="margin:0 0 14px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Tell the Hailey City Council: vote no.</h2>
+      <p style="margin:0; font-size:18px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Pick what worries you, add your name, and we build a letter in your words. It goes to the mayor, all four council members, the planning department that keeps the official record, and the county. Identical form letters get discounted. Yours won't be.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:28px; align-items:start;">
+      <div style="display:flex; flex-direction:column; gap:28px;">
+
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;">
+            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">1</span>
+            <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">What matters to you?</h3>
+          </div>
+          <p style="margin:0 0 16px; color:#A9B3AC; font-size:15px;">Pick up to three. Each one adds a paragraph.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <sc-for list="{{ reasonsEn }}" as="r" hint-placeholder-count="8">
+              <button onClick="{{ r.toggle }}" style="border:1.5px solid; border-radius:999px; padding:10px 16px; font-size:15px; font-weight:600; min-height:44px; white-space:nowrap; transition:all .18s ease; background:{{ r.bg }}; color:{{ r.fg }}; border-color:{{ r.bc }};">{{ r.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:16px;">
+            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">2</span>
+            <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">About you</h3>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
+            <input value="{{ name }}" onChange="{{ setName }}" placeholder="Full name" autoComplete="name" style="width:100%; min-height:48px; padding:12px 14px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px;">
+            <input value="{{ email }}" onChange="{{ setEmail }}" placeholder="Email" type="email" autoComplete="email" style="width:100%; min-height:48px; padding:12px 14px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px;">
+          </div>
+          <select value="{{ town }}" onChange="{{ setTown }}" style="margin-top:12px; width:100%; min-height:48px; padding:12px 14px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px;">
+            <option value="">Where do you live?</option>
+            <option value="Hailey">Hailey</option>
+            <option value="Bellevue">Bellevue</option>
+            <option value="Ketchum">Ketchum</option>
+            <option value="Sun Valley">Sun Valley</option>
+            <option value="Carey">Carey</option>
+            <option value="Picabo">Picabo / Gannett</option>
+            <option value="unincorporated Blaine County">Unincorporated Blaine County</option>
+            <option value="Lincoln County">Lincoln County (downstream)</option>
+            <option value="the Wood River Valley">Somewhere else in the valley</option>
+          </select>
+          <textarea value="{{ personal }}" onChange="{{ setPersonal }}" rows="2" placeholder="Optional: one line in your own words. How long you've lived here, what you do, what you'd lose." style="margin-top:12px; width:100%; padding:12px 14px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px; resize:vertical; line-height:1.45;"></textarea>
+          <label style="display:flex; gap:10px; align-items:center; margin-top:14px; font-size:15px; color:#D7D9CF; cursor:pointer;">
+            <input type="checkbox" checked="{{ alerts }}" onChange="{{ toggleAlerts }}" style="width:20px; height:20px; accent-color:#C4501F;">
+            Email me when there's a hearing or a deadline
+          </label>
+        </div>
+
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;">
+            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">3</span>
+            <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">Who gets it</h3>
+          </div>
+          <p style="margin:0 0 14px; color:#A9B3AC; font-size:15px;">The Hailey Planning &amp; Zoning Commission reads comments through the planning department's record.</p>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <sc-for list="{{ recipientsEn }}" as="r" hint-placeholder-count="4">
+              <label style="display:flex; gap:12px; align-items:flex-start; padding:12px 14px; border:1px solid #2F4436; border-radius:8px; cursor:pointer; min-height:44px;">
+                <input type="checkbox" checked="{{ r.on }}" onChange="{{ r.toggle }}" style="width:20px; height:20px; margin-top:2px; accent-color:#C4501F; flex:none;">
+                <span style="display:flex; flex-direction:column; gap:2px;">
+                  <span style="font-weight:600; font-size:15px;">{{ r.label }}</span>
+                  <span style="font-size:13px; color:#A9B3AC;">{{ r.detail }}</span>
+                </span>
+              </label>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div style="position:{{ stickyPos }}; top:76px;">
+        <div data-preview style="background:#F3EFE4; color:#17231C; border-radius:12px; padding:22px; box-shadow:0 20px 60px rgba(0,0,0,.35);">
+          <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:10px;">
+              <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:24px; text-transform:uppercase; letter-spacing:.02em;">Your letter</h3>
+              <span style="font-size:13px; color:#5B6660;">{{ toCountText }}</span>
+            </div>
+            <div style="font-size:13px; color:#5B6660; border-top:1px solid #D9D2C1; border-bottom:1px solid #D9D2C1; padding:8px 0; margin-bottom:10px; display:grid; grid-template-columns:auto 1fr; gap:4px 10px;">
+              <span style="font-weight:600;">To</span><span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{{ toPreview }}</span>
+              <span style="font-weight:600;">Subject</span><span>{{ subject }}</span>
+            </div>
+            <textarea value="{{ letterBody }}" onChange="{{ setBody }}" rows="16" style="width:100%; border:1px solid #D9D2C1; border-radius:8px; padding:14px; background:#fff; font-size:15.5px; line-height:1.5; resize:vertical; min-height:320px;"></textarea>
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-top:8px;">
+              <span style="font-size:13px; color:#5B6660;">Edit anything. It's your letter.</span>
+              <sc-if value="{{ edited }}" hint-placeholder-val="{{ false }}">
+                <button onClick="{{ resetBody }}" style="border:0; background:none; color:#2F6E87; font-size:13px; text-decoration:underline; padding:4px;">Reset to suggested text</button>
+              </sc-if>
+            </div>
+            <sc-if value="{{ hasError }}" hint-placeholder-val="{{ false }}">
+              <p style="margin:12px 0 0; padding:10px 12px; background:#FBE6DC; color:#8A3412; border-radius:8px; font-size:14px;">{{ errorMsg }}</p>
+            </sc-if>
+            <input value="{{ website }}" onChange="{{ setWebsite }}" tabIndex="-1" autoComplete="off" aria-hidden="true" placeholder="website" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;">
+            <div data-turnstile style="margin-top:12px; min-height:0;"></div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+              <button onClick="{{ send }}" disabled="{{ sending }}" style="flex:1 1 200px; border:0; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:22px; letter-spacing:.03em; text-transform:uppercase; padding:14px 20px; border-radius:6px; min-height:52px;">{{ sendLabel }}</button>
+              <button onClick="{{ openMail }}" style="flex:1 1 160px; border:1.5px solid #17231C; background:transparent; color:#17231C; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:12px 16px; border-radius:6px; min-height:52px;">Open in my mail app</button>
+            </div>
+            <p style="margin:12px 0 0; font-size:13px; color:#5B6660; line-height:1.45;">Sending puts your comment in the public record under your name. We keep your email only to tell you about hearings, if you asked us to.</p>
+          </sc-if>
+          <sc-if value="{{ showSuccess }}" hint-placeholder-val="{{ false }}">
+            <div style="text-align:center; padding:12px 6px;">
+              <p style="margin:0 0 8px; font-family:'Barlow Condensed'; font-weight:800; font-size:44px; text-transform:uppercase; line-height:1; color:#4F6B4E;">Sent.</p>
+              <p style="margin:0 0 22px; font-size:17px; line-height:1.5; text-wrap:pretty;">{{ successText }}</p>
+              <div style="display:flex; flex-direction:column; gap:10px; text-align:left;">
+                <a href="{{ smsHref }}" style="text-decoration:none; display:flex; justify-content:space-between; align-items:center; padding:14px 16px; border:1.5px solid #17231C; border-radius:8px; color:#17231C; font-weight:600;">Text this page to a neighbor <span style="color:#C4501F;">→</span></a>
+                <button onClick="{{ copyLink }}" style="display:flex; justify-content:space-between; align-items:center; padding:14px 16px; border:1.5px solid #17231C; border-radius:8px; background:transparent; color:#17231C; font-weight:600; text-align:left;">{{ copyLabel }} <span style="color:#C4501F;">→</span></button>
+                <a href="https://www.mtexpress.com/site/forms/" target="_blank" rel="noopener" style="text-decoration:none; display:flex; justify-content:space-between; align-items:center; padding:14px 16px; border:1.5px solid #17231C; border-radius:8px; color:#17231C; font-weight:600;">Send it to the Express as a letter to the editor <span style="color:#C4501F;">→</span></a>
+                <button onClick="{{ copyBody }}" style="border:0; background:none; color:#2F6E87; font-size:14px; text-decoration:underline; padding:6px; text-align:center;">{{ copyBodyLabel }}</button>
+              </div>
+              <button onClick="{{ sendAnother }}" style="margin-top:18px; border:0; background:none; color:#5B6660; font-size:14px; text-decoration:underline;">Send another from this device</button>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stakes" data-screen-label="Stakes" style="max-width:1160px; width:100%; margin:0 auto; padding:72px 20px 40px;">
+  <div style="max-width:720px; margin-bottom:40px;">
+    <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600;">What's at stake</p>
+    <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">A development this size reaches every part of the valley. And downstream.</h2>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1px; background:#D9D2C1; border:1px solid #D9D2C1; border-radius:12px; overflow:hidden;">
+    <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;">
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#2F6E87;">Over-allocated</p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Water</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Irrigated fields like this one are the second-largest source of water going back into the aquifer. Pave it, switch its rights to year-round city use, and you lose the recharge and add twelve months of pumping. The basin can't take it: in 2021 the state shut off 140 irrigators on 23,000 acres of the Bellevue Triangle, Lincoln County ranchers sold herds, and Silver Creek closed to fishing for the first time ever.</p>
+    </div>
+    <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .08s ease, transform .6s .08s ease;">
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#C4501F;"><span data-count="1400">1,400</span> cars</p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Traffic</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">The north phase alone means roughly 1,840 more people and 1,400 more vehicles on two-lane Highway 75 at Hailey's southern entrance.</p>
+    </div>
+    <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .16s ease, transform .6s .16s ease;">
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#4F6B4E;">21 → <span data-count="614">614</span></p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Farmland</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">This is working farmland. Under today's county zoning it could hold 21 homes at most. Annexation turns 21 into 614, plus a hotel and 280,000 square feet of industrial space. As towns take more water, farmers fallow more fields.</p>
+    </div>
+    <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .24s ease, transform .6s .24s ease;">
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#4F6B4E;">Two towns</p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Open space</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">The open ground between Hailey and Bellevue is wildlife habitat, a fire break, a place for water to soak back into the aquifer, and the reason the two towns are still two towns. Blaine County voters already tax themselves to protect ground like this: the Land, Water and Wildlife levy has helped buy conservation easements in the Bellevue Triangle. It's the only county program of its kind in Idaho.</p>
+    </div>
+    <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .32s ease, transform .6s .32s ease;">
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#C4501F;">3.5 miles</p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Downtown</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">A second commercial hub 3.5 miles from Main Street competes with the businesses downtown Hailey already has, and pulls people and money away from the center.</p>
+    </div>
+    <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .4s ease, transform .6s .4s ease;">
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#2F6E87;">Who pays?</p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Services</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">There is no city infrastructure on that land today. Roads, sewer, water, police, fire, schools, trails: the cost to existing residents is unknown, and it lasts long after the developer is gone.</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Map" style="max-width:1160px; width:100%; margin:0 auto; padding:24px 20px 72px; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px; align-items:center;">
+  <div style="aspect-ratio:16/11;">
+    <image-slot id="site-map" shape="rounded" radius="12" fit="contain" placeholder="Drop the site map from the Hailey meeting packet, or an aerial of the ranch" src="https://bloximages.chicago2.vip.townnews.com/mtexpress.com/content/tncms/assets/v3/editorial/e/6b/e6b88d48-5c73-4aba-bdfd-79d00ecefe08/6a48361469082.image.png?resize=1200%2C900&order=resize" credit="Developer's plan, from Hailey public meeting documents" credit-href="https://haileycityhall.org/community-development/active-land-use-applications/"></image-slot>
+  </div>
+  <div>
+    <h2 style="margin:0 0 14px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(34px, 4.5vw, 56px);">This is phase one.</h2>
+    <p style="margin:0 0 14px; font-size:17px; line-height:1.55; text-wrap:pretty;">The 108 acres before Hailey are the northern piece. The developer's own map shows another 119 acres to the south to be annexed into Bellevue later. Read together, it is a new town of its own at the entrance to the valley.</p>
+    <p style="margin:0; font-size:17px; line-height:1.55; text-wrap:pretty;">If Hailey says no, the land stays under Blaine County zoning: a maximum of 21 homes.</p>
+  </div>
+</section>
+
+<section data-screen-label="Claims" style="background:#E9E3D3; padding:72px 20px;">
+  <div style="max-width:1160px; margin:0 auto;">
+    <div style="max-width:720px; margin-bottom:36px;">
+      <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600;">What they say. What the record shows.</p>
+      <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Read the fine print.</h2>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:0; background:#F3EFE4; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;">
+        <div style="padding:24px; border-left:0;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">The developer says</p><p style="margin:0; font-size:19px; line-height:1.4; font-style:italic;">“There is no impact to Silver Creek.”</p></div>
+        <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">The record</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">The water study is being ordered and paid for by the developer, and it isn't due until the end of October. The chair of the South Valley Ground Water District told the Express that every new well here will affect rights holders downstream and the tributaries of Silver Creek.</p></div>
+      </div>
+      <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:0; background:#F3EFE4; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s .08s ease, transform .6s .08s ease;">
+        <div style="padding:24px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">The developer says</p><p style="margin:0; font-size:19px; line-height:1.4; font-style:italic;">“This is the housing your community needs.”</p></div>
+        <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">The record</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">About 900 units are already approved across the county and its cities. Another 1,940 platted lots sit undeveloped. None of the 614 units proposed here carry deed restrictions or a price tied to local wages.</p></div>
+      </div>
+      <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:0; background:#F3EFE4; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s .16s ease, transform .6s .16s ease;">
+        <div style="padding:24px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">The developer says</p><p style="margin:0; font-size:19px; line-height:1.4; font-style:italic;">“The donated fields will be open space between the towns.”</p></div>
+        <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">The record</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">Roughly 20 to 40 acres of playing fields, to be built and maintained by a recreation district that does not currently have the money to take them on. Fields with lights and parking are not open space, and they don't recharge an aquifer.</p></div>
+      </div>
+
+      <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:0; background:#F3EFE4; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s .24s ease, transform .6s .24s ease;">
+        <div style="padding:24px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">The developer says</p><p style="margin:0; font-size:19px; line-height:1.4; font-style:italic;">“The property already holds water rights that significantly exceed what Blaine Crossing needs.”</p></div>
+        <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">The record</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">Those are irrigation rights. Under the 2021 settlement, Triangle irrigators pump only May 1 to Sept. 15, and water from fallowed fields is supposed to go back into the aquifer as recharge. A city uses water twelve months a year and a parking lot recharges nothing. Moving the rights takes state approval, and the volume on paper is not the question. When and where the water comes out is.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bigpicture" data-screen-label="Big picture" style="background:#17231C; color:#F3EFE4; padding:80px 20px;">
+  <div style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center;">
+    <div>
+      <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#A9C1A5; font-weight:600;">The big picture</p>
+      <h2 style="margin:0 0 18px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Blaine Crossing isn't the only one.</h2>
+      <p style="margin:0 0 14px; font-size:17px; line-height:1.55; color:#D7D9CF; text-wrap:pretty;">Add up what's already approved, what's platted and waiting, and what's coming through annexations and development agreements across the valley, and you get about 4,400 more houses. At 2.3 people per house, that's roughly 10,000 more people in a county of 25,000.</p>
+      <p style="margin:0 0 24px; font-size:17px; line-height:1.55; color:#D7D9CF; text-wrap:pretty;">Nobody has answered three questions: Do we have the water? Who pays? Who benefits?</p>
+      <a href="#letter" style="text-decoration:none; display:inline-block; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:20px; letter-spacing:.03em; text-transform:uppercase; padding:13px 22px; border-radius:6px;">Ask them yourself</a>
+    </div>
+    <div style="display:grid; gap:2px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Approved or under construction</span><span data-count="900" style="font-size:44px; line-height:1;">900</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Platted lots, still empty</span><span data-count="1940" style="font-size:44px; line-height:1;">1,940</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Annexations &amp; development agreements</span><span data-count="1583" style="font-size:44px; line-height:1;">1,583</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:20px 0 6px;"><span style="font-size:20px; font-weight:700; color:#F3EFE4; letter-spacing:.04em;">More houses</span><span data-count="4423" style="font-size:72px; line-height:1; color:#C4501F;">4,423</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:6px 0;"><span style="font-size:20px; font-weight:700; color:#F3EFE4; letter-spacing:.04em;">More people</span><span style="font-size:44px; line-height:1; color:#A9C1A5;">≈ <span data-count="10172">10,172</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Voices" style="padding:72px 0 64px; overflow:hidden;">
+  <div style="max-width:1160px; margin:0 auto; padding:0 20px 28px;">
+    <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600;">Voices</p>
+    <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Within 48 hours of the first op-ed, about 140 people wrote in against it. One wrote in favor.</h2>
+  </div>
+  <div style="display:flex; gap:16px; overflow-x:auto; -webkit-overflow-scrolling:touch; scroll-snap-type:x mandatory; padding:4px max(20px, calc((100vw - 1160px) / 2 + 20px)) 20px; scrollbar-width:thin;">
+    <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“This is a case of build it and they will come. The developer stands to benefit immensely, while those of us that live here will be dealing with the negative ramifications forever.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Hailey resident</footer></blockquote>
+    <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“Developing 108 acres in between Hailey and Bellevue greatly impacts our entire valley: our water supply, road congestion, increased burden on all resources including emergency services, schools, trails.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Blaine County resident</footer></blockquote>
+    <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“Don't let developers blow up the valley under the guise of ‘we need affordable housing.’ New construction in the Wood River Valley is not ‘affordable.’ I'd love to move back and have a house and a job, but this is not about me. It is about developers making a killing.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Blaine County native</footer></blockquote>
+    <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“I am very concerned about a development this size in the Wood River Valley. We live downstream and our livelihood is greatly impacted by water use in the Wood River Valley.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Lincoln County resident</footer></blockquote>
+    <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“Enough is enough. We've been overwhelmed by rapid development, congestion, construction, and traffic jams. Who benefits from it? It's time for the community to take care of the community. Our leadership should be accountable to us, not developers.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Wood River Valley native and business owner</footer></blockquote>
+    <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“I used to love the small rural community feel of the Wood River Valley, but with the recent rapid growth I find it unrecognizable.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Visitor</footer></blockquote>
+  </div>
+</section>
+
+<section id="act" data-screen-label="Other actions" style="background:#17231C; color:#F3EFE4; padding:80px 20px 96px;">
+  <div style="max-width:1160px; margin:0 auto;">
+    <div style="max-width:760px; margin-bottom:28px;">
+      <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#A9C1A5; font-weight:600;">After you've sent your letter</p>
+      <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Three more things that move votes.</h2>
+    </div>
+    <div style="display:flex; flex-direction:column; border-bottom:1px solid #2F4436;">
+    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s 0s ease, transform .7s 0s ease, border-color .3s ease;">
+      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">01</span>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
+        <div>
+          <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Show up</h3>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Hailey City Council meets the second and fourth Monday at 5:30 pm, Hailey City Hall, 115 S. Main St. Council members count the room.</p>
+        </div>
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-family:'Barlow Condensed'; font-weight:800; font-size:64px; line-height:.9;">{{ daysToMeeting }}</span><span style="font-family:'Barlow Condensed'; font-weight:700; font-size:22px; text-transform:uppercase; letter-spacing:.04em; color:#A9C1A5;">{{ daysLabel }}</span></div><p style="margin:0; font-size:16px; color:#D7D9CF;">Next: {{ nextMeeting }}</p><div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;"><a href="{{ icsHref }}" download="hailey-city-council.ics" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:10px 16px; border-radius:6px; min-height:44px; display:inline-flex; align-items:center;">Add to calendar</a><a href="https://haileycityhall.org/boards-and-commissions/city-council/city-council-agendas/" target="_blank" rel="noopener" style="color:#A9C1A5; font-weight:600; font-size:15px; display:inline-flex; align-items:center; min-height:44px;">Agendas and the case file →</a></div></div>
+      </div>
+    </div>
+    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s .1s ease, transform .7s .1s ease, border-color .3s ease;">
+      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">02</span>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
+        <div>
+          <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Write the Express</h3>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">There has been a letter against Blaine Crossing in the paper nearly every week since July. Keep it going.</p>
+        </div>
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:16px; color:#D7D9CF;"><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Under 300 words</span></li><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>One point, not six</span></li><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Your name and your town</span></li><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Send them your council letter, trimmed</span></li></ul><div><a href="https://www.mtexpress.com/site/forms/" target="_blank" rel="noopener" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:10px 16px; border-radius:6px; min-height:44px; display:inline-flex; align-items:center;">Submit a letter to the editor</a></div></div>
+      </div>
+    </div>
+    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s .2s ease, transform .7s .2s ease, border-color .3s ease;">
+      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">03</span>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
+        <div>
+          <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Stay in the loop</h3>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">The formal application hasn't been filed yet. When the hearing dates land, you'll hear from us first. Nothing else.</p>
+        </div>
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><div style="display:flex; gap:8px;"><input value="{{ alertEmail }}" onChange="{{ setAlertEmail }}" placeholder="Email" type="email" style="flex:1; min-width:0; min-height:46px; padding:10px 12px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px;"><button onClick="{{ subscribe }}" style="border:0; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; text-transform:uppercase; letter-spacing:.03em; padding:0 16px; border-radius:8px; min-height:46px;">{{ subscribeLabel }}</button></div><p style="margin:0; font-size:13px; color:#A9B3AC;">One email per hearing or deadline. Unsubscribe any time.</p></div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<footer data-screen-label="Footer" style="border-top:1px solid #D9D2C1; padding:40px 20px 56px;">
+  <div style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:28px; font-size:15px; line-height:1.55; color:#3D4842;">
+    <div>
+      <p style="margin:0 0 8px; font-family:'Barlow Condensed'; font-weight:800; font-size:26px; text-transform:uppercase; color:#17231C;">Save Our Valley</p>
+      <p style="margin:0; text-wrap:pretty;">We are farmers, ranchers, fishers, conservationists, recreationists, business owners, visitors, and people who call the Wood River Valley home. We are not paid by anyone. We'd like to keep it that way.</p>
+    </div>
+    <div>
+      <p style="margin:0 0 8px; font-weight:600; color:#17231C;">Sources</p>
+      <p style="margin:0; text-wrap:pretty;">Figures come from the developer's letter of intent and presentation to the Hailey City Council (July 13, 2026), Hailey and Blaine County public records, the USGS Wood River Valley groundwater model (2016), the Big Wood River Ground Water Management Area plan and 2021 settlement (IDWR), and reporting in the Idaho Mountain Express. The official record for land use applications is kept by the <a href="https://haileycityhall.org/community-development/active-land-use-applications/" target="_blank" rel="noopener">City of Hailey</a>.</p>
+    </div>
+  </div>
+</footer>
+</div>
+</sc-if>
+
+<!-- ================= ES ================= -->
+<sc-if value="{{ isEs }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="ES">
+
+<header style="position:sticky; top:0; z-index:50; background:rgba(243,239,228,.92); backdrop-filter:blur(8px); border-bottom:1px solid #D9D2C1;">
+  <div data-progress style="position:absolute; left:0; bottom:-1px; height:3px; width:0%; background:#C4501F; transition:width .12s linear; pointer-events:none;"></div>
+  <div style="max-width:1160px; margin:0 auto; padding:10px 20px; display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+    <a href="#top" style="text-decoration:none; color:#17231C; display:flex; align-items:baseline; gap:10px; flex:1; min-width:0;">
+      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:24px; letter-spacing:.02em; text-transform:uppercase;">Save Our Valley</span>
+      <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}"><span style="font-size:13px; color:#5B6660; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Frena la expansión. Salva Silver Creek.</span></sc-if>
+    </a>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div style="display:flex; border:1px solid #D9D2C1; border-radius:999px; overflow:hidden; font-size:13px; font-weight:600;">
+        <button onClick="{{ setEn }}" style="border:0; padding:6px 12px; background:transparent; color:#17231C;">EN</button>
+        <button onClick="{{ setEs }}" style="border:0; padding:6px 12px; background:#17231C; color:#F3EFE4;">ES</button>
+      </div>
+      <a href="#letter" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:17px; letter-spacing:.03em; text-transform:uppercase; padding:9px 16px; border-radius:6px; white-space:nowrap;">{{ headerCta }}</a>
+    </div>
+  </div>
+</header>
+
+<section id="top" data-screen-label="Hero ES" style="max-width:1160px; width:100%; margin:0 auto; padding:clamp(28px, 5vw, 56px) 20px 40px; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:clamp(20px, 4vw, 36px); align-items:center;">
+  <div>
+    <p style="margin:0 0 18px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600; animation:rise .6s ease both;">Hailey, Idaho · Anexión “Blaine Crossing”</p>
+    <h1 style="margin:0 0 22px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.9; letter-spacing:-.01em; font-size:clamp(52px, 11vw, 120px); animation:rise .7s .08s ease both;">108 acres.<br><span data-count="614">614</span> viviendas.<br><span style="color:#C4501F;">Tres votos.</span></h1>
+    <p style="margin:0 0 28px; font-size:clamp(17px, 1.6vw, 20px); line-height:1.5; max-width:560px; text-wrap:pretty; animation:rise .7s .16s ease both;">Oppenheimer Development Corp. quiere que la Ciudad de Hailey anexe 108 acres del rancho Flying Hat, entre Hailey y Bellevue: 614 viviendas, 280,000 pies cuadrados de espacio industrial, comercios y un hotel de 100 habitaciones. El Concejo Municipal de Hailey decide. Tu correo queda en el registro oficial.</p>
+    <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; animation:rise .7s .24s ease both;">
+      <a href="#letter" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:22px; letter-spacing:.03em; text-transform:uppercase; padding:14px 24px; border-radius:6px; animation:pulse 2.4s 1.2s ease-out 3;">Escribe al concejo · 2 minutos</a>
+      <a href="#stakes" style="text-decoration:none; color:#17231C; font-family:'Barlow Condensed'; font-weight:700; font-size:22px; letter-spacing:.03em; text-transform:uppercase; padding:14px 18px; border:1.5px solid #17231C; border-radius:6px;">Qué está en juego</a>
+    </div>
+    <sc-if value="{{ showCount }}" hint-placeholder-val="{{ false }}">
+      <p style="margin:20px 0 0; font-size:15px; color:#4F6B4E; font-weight:600;">{{ countText }}</p>
+    </sc-if>
+  </div>
+  <div style="position:relative; aspect-ratio:4/5; max-height:min(620px, 70vh); animation:rise .8s .2s ease both;">
+    <image-slot id="hero-creek" shape="rounded" radius="14" placeholder="Foto: Silver Creek o el rancho Flying Hat" src="https://bloximages.chicago2.vip.townnews.com/mtexpress.com/content/tncms/assets/v3/editorial/0/9a/09a891e9-b18e-4587-bd28-a25fe1ee541b/6643bda1233d5.image.jpg?resize=1000%2C1250&order=resize" credit="Foto: Idaho Mountain Express (provisional, permiso pendiente)" credit-href="https://www.mtexpress.com/news/hailey/water-concerns-raised-ahead-of-blaine-crossing-open-house/article_7960f431-1cd5-4e8c-a690-011025b87850.html"></image-slot>
+    <div style="position:absolute; left:14px; bottom:14px; right:14px; display:flex; justify-content:flex-end; pointer-events:none;">
+      <span style="background:rgba(23,35,28,.82); color:#F3EFE4; font-size:13px; padding:6px 10px; border-radius:4px;">Rancho Flying Hat, al este de la carretera 75</span>
+    </div>
+  </div>
+</section>
+
+<section id="letter" data-screen-label="Letter tool ES" style="background:#17231C; color:#F3EFE4; padding:64px 20px 72px;">
+  <div style="max-width:1160px; margin:0 auto;">
+    <div style="max-width:720px; margin-bottom:36px;">
+      <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#A9C1A5; font-weight:600;">Dos minutos. Todas las direcciones que importan.</p>
+      <h2 style="margin:0 0 14px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Dile al Concejo de Hailey: voten no.</h2>
+      <p style="margin:0; font-size:18px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Elige lo que te preocupa, pon tu nombre y armamos una carta con tus palabras. Llega a la alcaldesa, a los cuatro concejales, al departamento de planificación que lleva el registro oficial y al condado. Las cartas idénticas pesan poco. La tuya no será idéntica.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:28px; align-items:start;">
+      <div style="display:flex; flex-direction:column; gap:28px;">
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;">
+            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">1</span>
+            <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">¿Qué te importa?</h3>
+          </div>
+          <p style="margin:0 0 16px; color:#A9B3AC; font-size:15px;">Elige hasta tres. Cada uno agrega un párrafo.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <sc-for list="{{ reasonsEs }}" as="r" hint-placeholder-count="8">
+              <button onClick="{{ r.toggle }}" style="border:1.5px solid; border-radius:999px; padding:10px 16px; font-size:15px; font-weight:600; min-height:44px; white-space:nowrap; transition:all .18s ease; background:{{ r.bg }}; color:{{ r.fg }}; border-color:{{ r.bc }};">{{ r.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:16px;">
+            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">2</span>
+            <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">Sobre ti</h3>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
+            <input value="{{ name }}" onChange="{{ setName }}" placeholder="Nombre completo" autoComplete="name" style="width:100%; min-height:48px; padding:12px 14px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px;">
+            <input value="{{ email }}" onChange="{{ setEmail }}" placeholder="Correo electrónico" type="email" autoComplete="email" style="width:100%; min-height:48px; padding:12px 14px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px;">
+          </div>
+          <select value="{{ town }}" onChange="{{ setTown }}" style="margin-top:12px; width:100%; min-height:48px; padding:12px 14px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px;">
+            <option value="">¿Dónde vives?</option>
+            <option value="Hailey">Hailey</option>
+            <option value="Bellevue">Bellevue</option>
+            <option value="Ketchum">Ketchum</option>
+            <option value="Sun Valley">Sun Valley</option>
+            <option value="Carey">Carey</option>
+            <option value="Picabo">Picabo / Gannett</option>
+            <option value="unincorporated Blaine County">Condado de Blaine (fuera de las ciudades)</option>
+            <option value="Lincoln County">Condado de Lincoln (río abajo)</option>
+            <option value="the Wood River Valley">Otro lugar del valle</option>
+          </select>
+          <textarea value="{{ personal }}" onChange="{{ setPersonal }}" rows="2" placeholder="Opcional: una línea con tus palabras. Cuánto tiempo llevas aquí, en qué trabajas, qué perderías." style="margin-top:12px; width:100%; padding:12px 14px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px; resize:vertical; line-height:1.45;"></textarea>
+          <label style="display:flex; gap:10px; align-items:center; margin-top:14px; font-size:15px; color:#D7D9CF; cursor:pointer;">
+            <input type="checkbox" checked="{{ alerts }}" onChange="{{ toggleAlerts }}" style="width:20px; height:20px; accent-color:#C4501F;">
+            Avísenme cuando haya una audiencia o una fecha límite
+          </label>
+        </div>
+
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;">
+            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">3</span>
+            <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">Quién la recibe</h3>
+          </div>
+          <p style="margin:0 0 14px; color:#A9B3AC; font-size:15px;">La Comisión de Planificación y Zonificación de Hailey lee los comentarios a través del registro del departamento de planificación.</p>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <sc-for list="{{ recipientsEs }}" as="r" hint-placeholder-count="4">
+              <label style="display:flex; gap:12px; align-items:flex-start; padding:12px 14px; border:1px solid #2F4436; border-radius:8px; cursor:pointer; min-height:44px;">
+                <input type="checkbox" checked="{{ r.on }}" onChange="{{ r.toggle }}" style="width:20px; height:20px; margin-top:2px; accent-color:#C4501F; flex:none;">
+                <span style="display:flex; flex-direction:column; gap:2px;">
+                  <span style="font-weight:600; font-size:15px;">{{ r.label }}</span>
+                  <span style="font-size:13px; color:#A9B3AC;">{{ r.detail }}</span>
+                </span>
+              </label>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div style="position:{{ stickyPos }}; top:76px;">
+        <div data-preview style="background:#F3EFE4; color:#17231C; border-radius:12px; padding:22px; box-shadow:0 20px 60px rgba(0,0,0,.35);">
+          <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:10px;">
+              <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:24px; text-transform:uppercase; letter-spacing:.02em;">Tu carta</h3>
+              <span style="font-size:13px; color:#5B6660;">{{ toCountText }}</span>
+            </div>
+            <div style="font-size:13px; color:#5B6660; border-top:1px solid #D9D2C1; border-bottom:1px solid #D9D2C1; padding:8px 0; margin-bottom:10px; display:grid; grid-template-columns:auto 1fr; gap:4px 10px;">
+              <span style="font-weight:600;">Para</span><span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{{ toPreview }}</span>
+              <span style="font-weight:600;">Asunto</span><span>{{ subject }}</span>
+            </div>
+            <textarea value="{{ letterBody }}" onChange="{{ setBody }}" rows="16" style="width:100%; border:1px solid #D9D2C1; border-radius:8px; padding:14px; background:#fff; font-size:15.5px; line-height:1.5; resize:vertical; min-height:320px;"></textarea>
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-top:8px;">
+              <span style="font-size:13px; color:#5B6660;">Cambia lo que quieras. Es tu carta.</span>
+              <sc-if value="{{ edited }}" hint-placeholder-val="{{ false }}">
+                <button onClick="{{ resetBody }}" style="border:0; background:none; color:#2F6E87; font-size:13px; text-decoration:underline; padding:4px;">Volver al texto sugerido</button>
+              </sc-if>
+            </div>
+            <sc-if value="{{ hasError }}" hint-placeholder-val="{{ false }}">
+              <p style="margin:12px 0 0; padding:10px 12px; background:#FBE6DC; color:#8A3412; border-radius:8px; font-size:14px;">{{ errorMsg }}</p>
+            </sc-if>
+            <input value="{{ website }}" onChange="{{ setWebsite }}" tabIndex="-1" autoComplete="off" aria-hidden="true" placeholder="website" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;">
+            <div data-turnstile style="margin-top:12px; min-height:0;"></div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+              <button onClick="{{ send }}" disabled="{{ sending }}" style="flex:1 1 200px; border:0; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:22px; letter-spacing:.03em; text-transform:uppercase; padding:14px 20px; border-radius:6px; min-height:52px;">{{ sendLabel }}</button>
+              <button onClick="{{ openMail }}" style="flex:1 1 160px; border:1.5px solid #17231C; background:transparent; color:#17231C; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:12px 16px; border-radius:6px; min-height:52px;">Abrir en mi correo</button>
+            </div>
+            <p style="margin:12px 0 0; font-size:13px; color:#5B6660; line-height:1.45;">Al enviar, tu comentario entra al registro público con tu nombre. Guardamos tu correo solo para avisarte de audiencias, si lo pediste.</p>
+          </sc-if>
+          <sc-if value="{{ showSuccess }}" hint-placeholder-val="{{ false }}">
+            <div style="text-align:center; padding:12px 6px;">
+              <p style="margin:0 0 8px; font-family:'Barlow Condensed'; font-weight:800; font-size:44px; text-transform:uppercase; line-height:1; color:#4F6B4E;">Enviada.</p>
+              <p style="margin:0 0 22px; font-size:17px; line-height:1.5; text-wrap:pretty;">{{ successText }}</p>
+              <div style="display:flex; flex-direction:column; gap:10px; text-align:left;">
+                <a href="{{ smsHref }}" style="text-decoration:none; display:flex; justify-content:space-between; align-items:center; padding:14px 16px; border:1.5px solid #17231C; border-radius:8px; color:#17231C; font-weight:600;">Mándale esta página a un vecino <span style="color:#C4501F;">→</span></a>
+                <button onClick="{{ copyLink }}" style="display:flex; justify-content:space-between; align-items:center; padding:14px 16px; border:1.5px solid #17231C; border-radius:8px; background:transparent; color:#17231C; font-weight:600; text-align:left;">{{ copyLabel }} <span style="color:#C4501F;">→</span></button>
+                <a href="https://www.mtexpress.com/site/forms/" target="_blank" rel="noopener" style="text-decoration:none; display:flex; justify-content:space-between; align-items:center; padding:14px 16px; border:1.5px solid #17231C; border-radius:8px; color:#17231C; font-weight:600;">Envíala al Express como carta al editor <span style="color:#C4501F;">→</span></a>
+                <button onClick="{{ copyBody }}" style="border:0; background:none; color:#2F6E87; font-size:14px; text-decoration:underline; padding:6px; text-align:center;">{{ copyBodyLabel }}</button>
+              </div>
+              <button onClick="{{ sendAnother }}" style="margin-top:18px; border:0; background:none; color:#5B6660; font-size:14px; text-decoration:underline;">Enviar otra desde este dispositivo</button>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stakes" data-screen-label="Stakes ES" style="max-width:1160px; width:100%; margin:0 auto; padding:72px 20px 40px;">
+  <div style="max-width:720px; margin-bottom:40px;">
+    <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600;">Qué está en juego</p>
+    <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Un proyecto de este tamaño llega a todo el valle. Y río abajo.</h2>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1px; background:#D9D2C1; border:1px solid #D9D2C1; border-radius:12px; overflow:hidden;">
+    <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;">
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#2F6E87;">Sobreasignada</p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Agua</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Los campos de riego como este son la segunda fuente de agua que vuelve al acuífero. Si lo pavimentas y cambias sus derechos a uso urbano todo el año, pierdes la recarga y sumas doce meses de bombeo. La cuenca no lo aguanta: en 2021 el estado cortó el agua a 140 regantes en 23,000 acres del Triángulo de Bellevue, rancheros del condado de Lincoln vendieron sus animales y Silver Creek cerró a la pesca por primera vez en su historia.</p>
+    </div>
+    <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .08s ease, transform .6s .08s ease;">
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#C4501F;"><span data-count="1400">1,400</span> autos</p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Tráfico</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Solo la fase norte significa unas 1,840 personas más y 1,400 vehículos más en la carretera 75, de dos carriles, en la entrada sur de Hailey.</p>
+    </div>
+    <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .16s ease, transform .6s .16s ease;">
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#4F6B4E;">21 → <span data-count="614">614</span></p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Tierra agrícola</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Hoy es tierra de cultivo. Con la zonificación actual del condado cabrían como máximo 21 casas. La anexión convierte 21 en 614, más un hotel y 280,000 pies cuadrados industriales. Cuando las ciudades toman más agua, los agricultores dejan más campos sin sembrar.</p>
+    </div>
+    <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .24s ease, transform .6s .24s ease;">
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#4F6B4E;">Dos pueblos</p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Espacio abierto</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">El terreno abierto entre Hailey y Bellevue es hábitat de fauna, cortafuegos, un lugar donde el agua vuelve al acuífero, y la razón por la que los dos pueblos siguen siendo dos pueblos. Los votantes del condado de Blaine ya pagan un impuesto para proteger terrenos como este: el gravamen de Tierra, Agua y Vida Silvestre ha ayudado a comprar servidumbres de conservación en el Triángulo de Bellevue. Es el único programa de este tipo en un condado de Idaho.</p>
+    </div>
+    <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .32s ease, transform .6s .32s ease;">
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#C4501F;">3.5 millas</p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">El centro</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Un segundo centro comercial a 3.5 millas de Main Street compite con los negocios que Hailey ya tiene y se lleva gente y dinero del centro.</p>
+    </div>
+    <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .4s ease, transform .6s .4s ease;">
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#2F6E87;">¿Quién paga?</p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Servicios</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Hoy no hay infraestructura municipal en ese terreno. Calles, alcantarillado, agua, policía, bomberos, escuelas, senderos: el costo para los residentes actuales no se conoce, y dura mucho después de que el desarrollador se haya ido.</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Map ES" style="max-width:1160px; width:100%; margin:0 auto; padding:24px 20px 72px; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px; align-items:center;">
+  <div style="aspect-ratio:16/11;">
+    <image-slot id="site-map" shape="rounded" radius="12" fit="contain" placeholder="Mapa del sitio o foto aérea del rancho" src="https://bloximages.chicago2.vip.townnews.com/mtexpress.com/content/tncms/assets/v3/editorial/e/6b/e6b88d48-5c73-4aba-bdfd-79d00ecefe08/6a48361469082.image.png?resize=1200%2C900&order=resize" credit="Plan del desarrollador, documentos públicos de Hailey" credit-href="https://haileycityhall.org/community-development/active-land-use-applications/"></image-slot>
+  </div>
+  <div>
+    <h2 style="margin:0 0 14px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(34px, 4.5vw, 56px);">Esto es la fase uno.</h2>
+    <p style="margin:0 0 14px; font-size:17px; line-height:1.55; text-wrap:pretty;">Los 108 acres que hoy tiene Hailey enfrente son la parte norte. El propio mapa del desarrollador muestra otros 119 acres al sur para anexar a Bellevue más adelante. Juntos, son un pueblo nuevo en la entrada del valle.</p>
+    <p style="margin:0; font-size:17px; line-height:1.55; text-wrap:pretty;">Si Hailey dice no, el terreno sigue bajo la zonificación del condado de Blaine: un máximo de 21 casas.</p>
+  </div>
+</section>
+
+<section data-screen-label="Claims ES" style="background:#E9E3D3; padding:72px 20px;">
+  <div style="max-width:1160px; margin:0 auto;">
+    <div style="max-width:720px; margin-bottom:36px;">
+      <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600;">Lo que dicen. Lo que muestra el registro.</p>
+      <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Lee la letra chica.</h2>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); background:#F3EFE4; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;">
+        <div style="padding:24px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">El desarrollador dice</p><p style="margin:0; font-size:19px; line-height:1.4; font-style:italic;">“No hay impacto en Silver Creek.”</p></div>
+        <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">El registro</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">El estudio de agua lo encarga y lo paga el desarrollador, y no estará listo hasta fines de octubre. El presidente del Distrito de Aguas Subterráneas del Valle Sur le dijo al Express que cada pozo nuevo aquí afectará a quienes tienen derechos río abajo y a los afluentes de Silver Creek.</p></div>
+      </div>
+      <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); background:#F3EFE4; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s .08s ease, transform .6s .08s ease;">
+        <div style="padding:24px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">El desarrollador dice</p><p style="margin:0; font-size:19px; line-height:1.4; font-style:italic;">“Esta es la vivienda que su comunidad necesita.”</p></div>
+        <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">El registro</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">Unas 900 unidades ya están aprobadas en el condado y sus ciudades. Otros 1,940 lotes ya trazados siguen vacíos. Ninguna de las 614 unidades propuestas aquí tiene restricciones de precio ligadas a los salarios locales.</p></div>
+      </div>
+      <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); background:#F3EFE4; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s .16s ease, transform .6s .16s ease;">
+        <div style="padding:24px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">El desarrollador dice</p><p style="margin:0; font-size:19px; line-height:1.4; font-style:italic;">“Los campos donados serán espacio abierto entre los pueblos.”</p></div>
+        <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">El registro</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">Entre 20 y 40 acres de canchas deportivas, que tendría que construir y mantener un distrito de recreación que hoy no tiene el dinero para hacerlo. Canchas con luces y estacionamiento no son espacio abierto, y no recargan un acuífero.</p></div>
+      </div>
+
+      <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); background:#F3EFE4; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s .24s ease, transform .6s .24s ease;">
+        <div style="padding:24px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">El desarrollador dice</p><p style="margin:0; font-size:19px; line-height:1.4; font-style:italic;">“La propiedad ya tiene derechos de agua que superan con mucho lo que Blaine Crossing necesita.”</p></div>
+        <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">El registro</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">Son derechos de riego. Bajo el acuerdo de 2021, los regantes del Triángulo bombean solo del 1 de mayo al 15 de septiembre, y el agua de los campos en descanso debe volver al acuífero como recarga. Una ciudad usa agua doce meses al año y un estacionamiento no recarga nada. Cambiar esos derechos requiere aprobación del estado, y el volumen en papel no es la pregunta. Cuándo y dónde sale el agua, sí.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bigpicture" data-screen-label="Big picture ES" style="background:#17231C; color:#F3EFE4; padding:80px 20px;">
+  <div style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center;">
+    <div>
+      <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#A9C1A5; font-weight:600;">El panorama completo</p>
+      <h2 style="margin:0 0 18px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Blaine Crossing no es el único.</h2>
+      <p style="margin:0 0 14px; font-size:17px; line-height:1.55; color:#D7D9CF; text-wrap:pretty;">Suma lo ya aprobado, lo trazado y en espera, y lo que viene por anexiones y acuerdos de desarrollo en todo el valle, y son unas 4,400 casas más. A 2.3 personas por casa, son unas 10,000 personas más en un condado de 25,000.</p>
+      <p style="margin:0 0 24px; font-size:17px; line-height:1.55; color:#D7D9CF; text-wrap:pretty;">Nadie ha respondido tres preguntas: ¿Tenemos el agua? ¿Quién paga? ¿Quién se beneficia?</p>
+      <a href="#letter" style="text-decoration:none; display:inline-block; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:20px; letter-spacing:.03em; text-transform:uppercase; padding:13px 22px; border-radius:6px;">Pregúntales tú</a>
+    </div>
+    <div style="display:grid; gap:2px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Aprobadas o en construcción</span><span data-count="900" style="font-size:44px; line-height:1;">900</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Lotes trazados, aún vacíos</span><span data-count="1940" style="font-size:44px; line-height:1;">1,940</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Anexiones y acuerdos de desarrollo</span><span data-count="1583" style="font-size:44px; line-height:1;">1,583</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:20px 0 6px;"><span style="font-size:20px; font-weight:700; color:#F3EFE4; letter-spacing:.04em;">Casas más</span><span data-count="4423" style="font-size:72px; line-height:1; color:#C4501F;">4,423</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:6px 0;"><span style="font-size:20px; font-weight:700; color:#F3EFE4; letter-spacing:.04em;">Personas más</span><span style="font-size:44px; line-height:1; color:#A9C1A5;">≈ <span data-count="10172">10,172</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Voices ES" style="padding:72px 0 64px; overflow:hidden;">
+  <div style="max-width:1160px; margin:0 auto; padding:0 20px 28px;">
+    <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600;">Voces</p>
+    <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">En 48 horas tras la primera columna, unas 140 personas escribieron en contra. Una escribió a favor.</h2>
+  </div>
+  <div style="display:flex; gap:16px; overflow-x:auto; -webkit-overflow-scrolling:touch; scroll-snap-type:x mandatory; padding:4px max(20px, calc((100vw - 1160px) / 2 + 20px)) 20px; scrollbar-width:thin;">
+    <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“Es el caso de ‘constrúyelo y vendrán’. El desarrollador gana muchísimo, y los que vivimos aquí cargamos con las consecuencias para siempre.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Residente de Hailey</footer></blockquote>
+    <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“Desarrollar 108 acres entre Hailey y Bellevue afecta a todo el valle: el agua, la congestión, y más carga sobre todos los recursos, incluidos emergencias, escuelas y senderos.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Residente del condado de Blaine</footer></blockquote>
+    <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“No dejen que los desarrolladores destruyan el valle con la excusa de que ‘necesitamos vivienda asequible’. Lo nuevo que se construye en el valle no es asequible. Me encantaría volver y tener casa y trabajo, pero esto no se trata de mí. Se trata de desarrolladores haciendo una fortuna.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Nacido en el condado de Blaine</footer></blockquote>
+    <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“Me preocupa mucho un desarrollo de este tamaño en el valle. Vivimos río abajo y nuestro sustento depende del uso del agua en el Wood River Valley.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Residente del condado de Lincoln</footer></blockquote>
+    <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“Ya basta. Nos han saturado el desarrollo acelerado, la congestión, la construcción y los embotellamientos. ¿Quién se beneficia? Es hora de que la comunidad cuide a la comunidad. Nuestros líderes deben rendir cuentas ante nosotros, no ante los desarrolladores.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Nacida en el valle, dueña de un negocio</footer></blockquote>
+    <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“Me encantaba el ambiente rural y de pueblo chico del valle, pero con el crecimiento reciente ya no lo reconozco.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Visitante</footer></blockquote>
+  </div>
+</section>
+
+<section id="act" data-screen-label="Other actions ES" style="background:#17231C; color:#F3EFE4; padding:80px 20px 96px;">
+  <div style="max-width:1160px; margin:0 auto;">
+    <div style="max-width:760px; margin-bottom:28px;">
+      <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#A9C1A5; font-weight:600;">Después de enviar tu carta</p>
+      <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Tres cosas más que mueven votos.</h2>
+    </div>
+    <div style="display:flex; flex-direction:column; border-bottom:1px solid #2F4436;">
+    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s 0s ease, transform .7s 0s ease, border-color .3s ease;">
+      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">01</span>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
+        <div>
+          <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Ve en persona</h3>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">El Concejo de Hailey se reúne el segundo y cuarto lunes a las 5:30 pm en el Ayuntamiento, 115 S. Main St. Los concejales cuentan cuánta gente hay en la sala.</p>
+        </div>
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-family:'Barlow Condensed'; font-weight:800; font-size:64px; line-height:.9;">{{ daysToMeeting }}</span><span style="font-family:'Barlow Condensed'; font-weight:700; font-size:22px; text-transform:uppercase; letter-spacing:.04em; color:#A9C1A5;">{{ daysLabel }}</span></div><p style="margin:0; font-size:16px; color:#D7D9CF;">Próxima: {{ nextMeeting }}</p><div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;"><a href="{{ icsHref }}" download="concejo-hailey.ics" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:10px 16px; border-radius:6px; min-height:44px; display:inline-flex; align-items:center;">Agregar al calendario</a><a href="https://haileycityhall.org/boards-and-commissions/city-council/city-council-agendas/" target="_blank" rel="noopener" style="color:#A9C1A5; font-weight:600; font-size:15px; display:inline-flex; align-items:center; min-height:44px;">Agendas y expediente →</a></div></div>
+      </div>
+    </div>
+    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s .1s ease, transform .7s .1s ease, border-color .3s ease;">
+      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">02</span>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
+        <div>
+          <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Escribe al Express</h3>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Desde julio ha salido una carta contra Blaine Crossing en el periódico casi cada semana. Que siga.</p>
+        </div>
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:16px; color:#D7D9CF;"><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Menos de 300 palabras</span></li><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Una sola idea</span></li><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Tu nombre y tu pueblo</span></li><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Manda tu carta al concejo, recortada</span></li></ul><div><a href="https://www.mtexpress.com/site/forms/" target="_blank" rel="noopener" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:10px 16px; border-radius:6px; min-height:44px; display:inline-flex; align-items:center;">Enviar carta al editor</a></div></div>
+      </div>
+    </div>
+    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s .2s ease, transform .7s .2s ease, border-color .3s ease;">
+      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">03</span>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
+        <div>
+          <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Mantente al tanto</h3>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">La solicitud formal aún no se ha presentado. Cuando haya fechas de audiencia, te avisamos primero. Nada más.</p>
+        </div>
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><div style="display:flex; gap:8px;"><input value="{{ alertEmail }}" onChange="{{ setAlertEmail }}" placeholder="Correo" type="email" style="flex:1; min-width:0; min-height:46px; padding:10px 12px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px;"><button onClick="{{ subscribe }}" style="border:0; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; text-transform:uppercase; letter-spacing:.03em; padding:0 16px; border-radius:8px; min-height:46px;">{{ subscribeLabel }}</button></div><p style="margin:0; font-size:13px; color:#A9B3AC;">Un correo por audiencia o fecha límite. Puedes darte de baja cuando quieras.</p></div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<footer data-screen-label="Footer ES" style="border-top:1px solid #D9D2C1; padding:40px 20px 56px;">
+  <div style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:28px; font-size:15px; line-height:1.55; color:#3D4842;">
+    <div>
+      <p style="margin:0 0 8px; font-family:'Barlow Condensed'; font-weight:800; font-size:26px; text-transform:uppercase; color:#17231C;">Save Our Valley</p>
+      <p style="margin:0; text-wrap:pretty;">Somos agricultores, rancheros, pescadores, conservacionistas, gente que sale al monte, dueños de negocios, visitantes y personas que llaman hogar al Wood River Valley. Nadie nos paga. Queremos que siga así.</p>
+    </div>
+    <div>
+      <p style="margin:0 0 8px; font-weight:600; color:#17231C;">Fuentes</p>
+      <p style="margin:0; text-wrap:pretty;">Las cifras vienen de la carta de intención y la presentación del desarrollador ante el Concejo de Hailey (13 de julio de 2026), registros públicos de Hailey y del condado de Blaine, el modelo de aguas subterráneas del USGS para el valle (2016), el plan del Área de Manejo de Aguas Subterráneas del Big Wood y el acuerdo de 2021 (IDWR), y la cobertura del Idaho Mountain Express. El registro oficial de solicitudes de uso de suelo lo lleva la <a href="https://haileycityhall.org/community-development/active-land-use-applications/" target="_blank" rel="noopener">Ciudad de Hailey</a>.</p>
+    </div>
+  </div>
+</footer>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;endpointUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Sending&quot;,&quot;description&quot;:&quot;Leave empty to use the Supabase send-letter function. Type 'mailto' to fall back to the visitor's mail app.&quot;},&quot;turnstileSiteKey&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Sending&quot;,&quot;description&quot;:&quot;Cloudflare Turnstile site key. Empty = no captcha widget (server skips the check until TURNSTILE_SECRET is set).&quot;},&quot;metaPixelId&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Tracking&quot;,&quot;description&quot;:&quot;Meta Pixel ID. Fires PageView on load and a Lead event (eventID shared with the server) on a successful send.&quot;},&quot;lettersSent&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:100000,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Sending&quot;,&quot;description&quot;:&quot;Letters sent so far (from Supabase letter_count). Shows in the hero once it reaches 25.&quot;},&quot;nextMeetingISO&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;2026-09-28T17:30:00-06:00&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;,&quot;description&quot;:&quot;Next council meeting, ISO date-time with Mountain offset. Drives the countdown and the calendar file.&quot;},&quot;bellevueDefault&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sending&quot;},&quot;defaultLang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;en&quot;,&quot;options&quot;:[&quot;en&quot;,&quot;es&quot;],&quot;tsType&quot;:&quot;'en' | 'es'&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  static R = {
+    hailey: ['martha.burke@haileycityhall.org','kaz.thea@haileycityhall.org','sage.sauerbrey@haileycityhall.org','dustin.stone@haileycityhall.org','juan.martinez@haileycityhall.org'],
+    record: ['planning@haileycityhall.org'],
+    county: ['pzcounter@co.blaine.id.us'],
+    bellevue: ['cgiordani@bellevueidaho.us','dshay@bellevueidaho.us','tbergin@bellevueidaho.us','tdavis@bellevueidaho.us','swrede@bellevueidaho.us','aard@bellevueidaho.us','gbeiser@bellevueidaho.us']
+  };
+  static KEYS = ['water','recharge','traffic','taxes','farmland','openspace','downtown','housing'];
+  static L = {
+    en: {
+      labels: { water:'Water', recharge:'Aquifer recharge', traffic:'Traffic on Highway 75', taxes:'Taxes and city services', farmland:'Farmland', openspace:'Open space between towns', downtown:'Downtown businesses', housing:'Housing costs' },
+      rcpt: [
+        { key:'hailey', label:'Mayor Burke and the Hailey City Council', detail:'Martha Burke, Kaz Thea, Sage Sauerbrey, Dustin Stone, Juan Martinez' },
+        { key:'record', label:'Hailey Community Development (official record)', detail:'planning@haileycityhall.org — the case file the council and P&Z rely on' },
+        { key:'county', label:'Blaine County Land Use', detail:'The county sets the area of city impact and can still weigh in' },
+        { key:'bellevue', label:'Mayor Giordani and the Bellevue Council', detail:'The southern 119 acres are aimed at Bellevue next' }
+      ],
+      greet: ['Mayor Burke and members of the Hailey City Council,', 'Mayor Burke, Mayor Giordani, and members of the Hailey and Bellevue city councils,'],
+      subject: ['Please deny the Blaine Crossing annexation', 'Public comment: Blaine Crossing annexation (Flying Hat Ranch)', 'Vote no on Blaine Crossing', 'Blaine Crossing is not in Hailey\u2019s interest'],
+      open: [
+        'My name is {name} and I live in {town}. I\u2019m writing to ask you to deny Oppenheimer Development\u2019s request to annex 108 acres of Flying Hat Ranch for the project they call Blaine Crossing.',
+        'I\u2019m a {town} resident writing about the Blaine Crossing proposal. Please vote no on annexing Flying Hat Ranch into Hailey.',
+        'I\u2019ve followed the Blaine Crossing proposal since the July 13 council meeting, and I want my objection on the record before the application reaches you. Please deny the annexation.'
+      ],
+      generic: 'Six hundred fourteen homes, a hotel, and 280,000 square feet of industrial space on farmland three and a half miles from downtown is not growth Hailey can absorb. It is a new town at our southern gate, and the people who already live here will carry its costs.',
+      reasons: {
+        water: [
+          'Water is my biggest concern. Our basin is already over-allocated. In 2021 the state ordered 140 irrigators on 23,000 acres of the Bellevue Triangle to stop pumping, and Silver Creek closed to fishing for the first time because the water got too warm. Farms here are already fallowing ground to stay within the settlement that followed. Adding 614 homes, a hotel, and 280,000 square feet of industrial space on top of that is not responsible.',
+          'Start with water. The developer\u2019s study is being paid for by the developer and won\u2019t be finished until the end of October. The chair of the South Valley Ground Water District has said every new well here will hurt rights holders downstream and the tributaries of Silver Creek. The city should not move an annexation forward without an independent, basin-wide water budget.'
+        ],
+        recharge: [
+          'Irrigated farmland is the second-largest source of water going back into this aquifer, after the rivers themselves. The 2021 settlement that keeps Bellevue Triangle farms running depends on fallowed fields being turned into recharge. Paving this one and switching its rights to year-round city use does the opposite: less water going in, more coming out, twelve months a year instead of four and a half.',
+          'The developer says the land already has more water rights than it needs. Those are irrigation rights, used May through mid-September. A city pumps in January. Nobody has shown what that change in timing does to the springs that feed Silver Creek, and the developer\u2019s own study isn\u2019t finished. Please don\u2019t annex ahead of the answer.'
+        ],
+        traffic: [
+          'The north phase alone would put roughly 1,400 more cars on Highway 75 at Hailey\u2019s southern entrance. That stretch is two lanes. Anyone who drives it at 5 p.m. knows it can\u2019t absorb that.',
+          'Highway 75 between Bellevue and Hailey is already the worst part of my day. About 1,840 more residents and their vehicles funneling through one intersection is more than that road can handle.'
+        ],
+        taxes: [
+          'There is no city infrastructure out there today. Roads, sewer, water lines, police, fire, snow removal, schools: existing residents end up paying for all of it while the developer takes the profit. Hailey shouldn\u2019t sign up for that.',
+          'Annexation without infrastructure puts the bill on current taxpayers. Nobody has shown Hailey residents what this development will cost the city over twenty years. Until that number exists, the answer has to be no.'
+        ],
+        farmland: [
+          'This is working farmland. Under current county zoning it could hold 21 homes at most. Annexation turns 21 into 614. Once it\u2019s paved, it doesn\u2019t come back.',
+          'Every acre of farmland we lose to development pushes more of the water burden onto the farms that remain. The county\u2019s farmers are already fallowing fields to meet state requirements. Taking this ground out of production makes their job harder.'
+        ],
+        openspace: [
+          'The open ground between Hailey and Bellevue is why they are still two towns. It\u2019s wildlife habitat, a fire break, and the view that tells you you\u2019re home. Twenty acres of playing fields is not a substitute.',
+          'I don\u2019t want to drive from Bellevue to Hailey without ever leaving town. The separation between the two cities is worth more than any single project.'
+        ],
+        downtown: [
+          'A commercial center three and a half miles from Main Street competes directly with the businesses downtown Hailey already has. We should be filling the storefronts we\u2019ve got, not building a second town center.',
+          'Hailey\u2019s downtown works because it is the center. Retail, a hotel, and industrial space at the south end of town pulls people and money away from it.'
+        ],
+        housing: [
+          'I understand the argument that we need housing. But nothing built here will be priced for the people who work here, about 900 units are already approved across the valley, and nearly 2,000 platted lots are still sitting empty. This isn\u2019t about need. It\u2019s about what the developer can sell.',
+          'If this were about workforce housing, it would come with deed restrictions and prices local wages can carry. It doesn\u2019t. It is market-rate homes, a hotel, and industrial space on farmland.'
+        ]
+      },
+      close: [
+        'Please vote no on the Blaine Crossing annexation, and please include this letter in the public record.',
+        'I\u2019m asking you to deny this annexation. Please make this comment part of the official record for the application.',
+        'Hailey does not have to annex this land. Please say no, and please add my comment to the record.'
+      ],
+      thanks: 'Thank you',
+      fallbackTown: 'the Wood River Valley', fallbackName: '[your name]',
+      needName: 'Add your name and a working email so your comment counts.',
+      needRcpt: 'Pick at least one recipient.',
+      sendFail: 'That didn\u2019t go through. Try again, or use \u201cOpen in my mail app.\u201d',
+      sendLabel: 'Send my letter', sending: 'Sending\u2026',
+      success: 'Your letter went to {n} people, and a copy went to the official record. Now the part that actually moves votes: get one more person to do the same.',
+      successMail: 'Your mail app should be open with the letter and every address filled in. Hit send there. Then get one more person to do the same.',
+      copyLink: 'Copy the link', copied: 'Copied', copyBody: 'Copy my letter text', copiedBody: 'Letter copied',
+      smsText: 'Hailey is about to decide on 614 homes between Hailey and Bellevue. Takes 2 minutes to email the council: ',
+      count: '{n} letters sent so far', subscribe: 'Sign up', subscribed: 'You\u2019re on the list', subFail: 'Enter a valid email', subNoEndpoint: 'Alerts aren\u2019t connected yet',
+      toCount: 'to {n} addresses'
+    },
+    es: {
+      labels: { water:'Agua', recharge:'Recarga del acuífero', traffic:'Tráfico en la carretera 75', taxes:'Impuestos y servicios', farmland:'Tierra agrícola', openspace:'Espacio abierto entre pueblos', downtown:'Negocios del centro', housing:'Costo de la vivienda' },
+      rcpt: [
+        { key:'hailey', label:'La alcaldesa Burke y el Concejo de Hailey', detail:'Martha Burke, Kaz Thea, Sage Sauerbrey, Dustin Stone, Juan Martinez' },
+        { key:'record', label:'Desarrollo Comunitario de Hailey (registro oficial)', detail:'planning@haileycityhall.org: el expediente que usan el concejo y la comisión' },
+        { key:'county', label:'Uso de Suelo del condado de Blaine', detail:'El condado define el área de impacto y aún puede opinar' },
+        { key:'bellevue', label:'La alcaldesa Giordani y el Concejo de Bellevue', detail:'Los 119 acres del sur van a Bellevue después' }
+      ],
+      greet: ['Alcaldesa Burke y miembros del Concejo Municipal de Hailey:', 'Alcaldesa Burke, alcaldesa Giordani y miembros de los concejos de Hailey y Bellevue:'],
+      subject: ['Por favor nieguen la anexión de Blaine Crossing', 'Comentario público: anexión Blaine Crossing (rancho Flying Hat)', 'Voten no a Blaine Crossing', 'Blaine Crossing no le conviene a Hailey'],
+      open: [
+        'Me llamo {name} y vivo en {town}. Les escribo para pedirles que nieguen la solicitud de Oppenheimer Development de anexar 108 acres del rancho Flying Hat para el proyecto que llaman Blaine Crossing.',
+        'Soy residente de {town} y les escribo sobre la propuesta Blaine Crossing. Por favor voten no a la anexión del rancho Flying Hat a Hailey.',
+        'He seguido la propuesta Blaine Crossing desde la reunión del concejo del 13 de julio, y quiero que mi objeción quede en el registro antes de que la solicitud llegue a ustedes. Por favor nieguen la anexión.'
+      ],
+      generic: 'Seiscientas catorce viviendas, un hotel y 280,000 pies cuadrados industriales sobre tierra agrícola a tres millas y media del centro no es un crecimiento que Hailey pueda absorber. Es un pueblo nuevo en nuestra entrada sur, y quienes ya vivimos aquí cargaremos con sus costos.',
+      reasons: {
+        water: [
+          'El agua es mi mayor preocupación. Nuestra cuenca ya está sobreasignada. En 2021 el estado ordenó a 140 regantes en 23,000 acres del Triángulo de Bellevue dejar de bombear, y Silver Creek cerró a la pesca por primera vez porque el agua se calentó demasiado. Las granjas de aquí ya dejan campos en descanso para cumplir con el acuerdo que siguió. Sumarle 614 viviendas, un hotel y 280,000 pies cuadrados industriales no es responsable.',
+          'Empecemos por el agua. El estudio del desarrollador lo paga el propio desarrollador y no estará listo hasta fines de octubre. El presidente del Distrito de Aguas Subterráneas del Valle Sur ha dicho que cada pozo nuevo aquí perjudicará a quienes tienen derechos río abajo y a los afluentes de Silver Creek. La ciudad no debería avanzar una anexión sin un balance hídrico independiente de toda la cuenca.'
+        ],
+        recharge: [
+          'La tierra agrícola de riego es la segunda fuente de agua que vuelve a este acuífero, después de los propios ríos. El acuerdo de 2021 que mantiene funcionando las granjas del Triángulo de Bellevue depende de convertir campos en descanso en recarga. Pavimentar este y cambiar sus derechos a uso urbano todo el año hace lo contrario: entra menos agua, sale más, doce meses en vez de cuatro y medio.',
+          'El desarrollador dice que el terreno ya tiene más derechos de agua de los que necesita. Son derechos de riego, que se usan de mayo a mediados de septiembre. Una ciudad bombea en enero. Nadie ha mostrado qué hace ese cambio de calendario a los manantiales que alimentan Silver Creek, y el estudio del propio desarrollador no está terminado. Por favor no anexen antes de tener la respuesta.'
+        ],
+        traffic: [
+          'Solo la fase norte pondría unos 1,400 autos más en la carretera 75, en la entrada sur de Hailey. Ese tramo tiene dos carriles. Cualquiera que lo maneje a las 5 de la tarde sabe que no aguanta eso.',
+          'La carretera 75 entre Bellevue y Hailey ya es la peor parte de mi día. Unos 1,840 residentes más con sus vehículos pasando por una sola intersección es más de lo que ese camino puede soportar.'
+        ],
+        taxes: [
+          'Hoy no hay infraestructura municipal en ese terreno. Calles, alcantarillado, tuberías de agua, policía, bomberos, quitanieves, escuelas: los residentes actuales terminamos pagando todo mientras el desarrollador se lleva la ganancia. Hailey no debería aceptar eso.',
+          'Anexar sin infraestructura le pasa la cuenta a los contribuyentes actuales. Nadie le ha mostrado a los residentes de Hailey cuánto le costará este desarrollo a la ciudad en veinte años. Mientras no exista esa cifra, la respuesta tiene que ser no.'
+        ],
+        farmland: [
+          'Esta es tierra agrícola en uso. Con la zonificación actual del condado cabrían como máximo 21 casas. La anexión convierte 21 en 614. Una vez pavimentada, no vuelve.',
+          'Cada acre agrícola que perdemos al desarrollo carga más el agua sobre las granjas que quedan. Los agricultores del condado ya dejan campos sin sembrar para cumplir con el estado. Sacar este terreno de producción les hace el trabajo más difícil.'
+        ],
+        openspace: [
+          'El terreno abierto entre Hailey y Bellevue es la razón por la que siguen siendo dos pueblos. Es hábitat de fauna, cortafuegos, y la vista que te dice que llegaste a casa. Veinte acres de canchas no lo sustituyen.',
+          'No quiero manejar de Bellevue a Hailey sin salir nunca del pueblo. La separación entre las dos ciudades vale más que cualquier proyecto.'
+        ],
+        downtown: [
+          'Un centro comercial a tres millas y media de Main Street compite directamente con los negocios que el centro de Hailey ya tiene. Deberíamos llenar los locales que existen, no construir un segundo centro.',
+          'El centro de Hailey funciona porque es el centro. Comercios, un hotel y espacio industrial en el extremo sur del pueblo se llevan gente y dinero de ahí.'
+        ],
+        housing: [
+          'Entiendo el argumento de que necesitamos vivienda. Pero nada de lo que se construya aquí tendrá precios para la gente que trabaja aquí, ya hay unas 900 unidades aprobadas en el valle y casi 2,000 lotes trazados siguen vacíos. Esto no es por necesidad. Es por lo que el desarrollador puede vender.',
+          'Si esto fuera vivienda para trabajadores, vendría con restricciones de precio ligadas a los salarios locales. No las tiene. Son casas a precio de mercado, un hotel y espacio industrial sobre tierra agrícola.'
+        ]
+      },
+      close: [
+        'Por favor voten no a la anexión de Blaine Crossing, e incluyan esta carta en el registro público.',
+        'Les pido que nieguen esta anexión. Por favor hagan de este comentario parte del registro oficial de la solicitud.',
+        'Hailey no tiene que anexar este terreno. Por favor digan no, y agreguen mi comentario al registro.'
+      ],
+      thanks: 'Gracias',
+      fallbackTown: 'el Wood River Valley', fallbackName: '[tu nombre]',
+      needName: 'Agrega tu nombre y un correo válido para que tu comentario cuente.',
+      needRcpt: 'Elige al menos un destinatario.',
+      sendFail: 'No se pudo enviar. Intenta de nuevo o usa \u201cAbrir en mi correo\u201d.',
+      sendLabel: 'Enviar mi carta', sending: 'Enviando\u2026',
+      success: 'Tu carta llegó a {n} personas y una copia quedó en el registro oficial. Ahora lo que de verdad mueve votos: consigue que una persona más haga lo mismo.',
+      successMail: 'Tu app de correo debería estar abierta con la carta y todas las direcciones. Envíala desde ahí. Luego consigue que una persona más haga lo mismo.',
+      copyLink: 'Copiar el enlace', copied: 'Copiado', copyBody: 'Copiar el texto de mi carta', copiedBody: 'Carta copiada',
+      smsText: 'Hailey está por decidir sobre 614 viviendas entre Hailey y Bellevue. Toma 2 minutos escribirle al concejo: ',
+      count: '{n} cartas enviadas hasta ahora', subscribe: 'Anotarme', subscribed: 'Ya estás en la lista', subFail: 'Escribe un correo válido', subNoEndpoint: 'Las alertas aún no están conectadas',
+      toCount: 'a {n} direcciones'
+    }
+  };
+
+  state = { lang: null, reasons: [], name: '', email: '', town: '', personal: '', alerts: true, rcpt: { hailey: true, record: true, county: true, bellevue: true }, bodyOverride: null, status: 'idle', sentVia: null, error: '', copied: false, copiedBody: false, alertEmail: '', subStatus: 'idle', localSent: 0 };
+
+  get lang() { return this.state.lang || this.props.defaultLang || 'en'; }
+  get L() { return Component.L[this.lang]; }
+
+  componentDidMount() {
+    if (this.props.bellevueDefault === false) this.setState(s => ({ rcpt: { ...s.rcpt, bellevue: false } }));
+    this.observe();
+    this._tick = setInterval(() => this.forceUpdate(), 60000);
+    this._onScroll = () => {
+      if (this._raf) return;
+      this._raf = requestAnimationFrame(() => {
+        this._raf = 0;
+        const d = document.documentElement, max = d.scrollHeight - d.clientHeight;
+        const p = max > 0 ? Math.min(100, (d.scrollTop / max) * 100) : 0;
+        document.querySelectorAll('[data-progress]').forEach(el => { el.style.width = p.toFixed(1) + '%'; });
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._mq = window.matchMedia('(min-width: 700px)');
+    this._onMq = () => this.setState({ wide: this._mq.matches });
+    this._mq.addEventListener('change', this._onMq);
+    this.setState({ wide: this._mq.matches });
+    if (this.props.metaPixelId && window.fbq) { try { window.fbq('init', String(this.props.metaPixelId)); window.fbq('track', 'PageView'); } catch (e) {} }
+    this._tsTimer = setInterval(() => { if (window.turnstile) { this.mountTurnstile(); } }, 800);
+  }
+  componentWillUnmount() { clearInterval(this._tick); clearInterval(this._tsTimer); window.removeEventListener('scroll', this._onScroll); this._mq?.removeEventListener('change', this._onMq); }
+  componentDidUpdate() { this.observe(); }
+  flashPreview() {
+    requestAnimationFrame(() => document.querySelectorAll('[data-preview]').forEach(el => { el.style.animation = 'none'; void el.offsetWidth; el.style.animation = 'glow .8s ease'; }));
+  }
+  meetingDate() { const d = new Date(this.props.nextMeetingISO || '2026-09-28T17:30:00-06:00'); return isNaN(d) ? null : d; }
+  icsHref() {
+    const d = this.meetingDate(); if (!d) return '#';
+    const f = x => x.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+    const end = new Date(d.getTime() + 150 * 60000);
+    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Save Our Valley//EN', 'BEGIN:VEVENT', 'UID:hailey-council-' + f(d) + '@saveourvalley.com', 'DTSTAMP:' + f(new Date()), 'DTSTART:' + f(d), 'DTEND:' + f(end), 'SUMMARY:Hailey City Council meeting (Blaine Crossing)', 'LOCATION:Hailey City Hall\\, 115 S. Main St.\\, Hailey\\, ID', 'DESCRIPTION:Show up. Council members count the room. saveourvalley.com', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+    return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+  }
+
+  observe() {
+    if (!this._io) {
+      this._io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          const el = e.target; this._io.unobserve(el);
+          el.style.opacity = '1'; el.style.transform = 'none';
+          el.querySelectorAll('[data-count]').forEach(n => this.countUp(n));
+          if (el.hasAttribute('data-count')) this.countUp(el);
+        });
+      }, { threshold: 0.15 });
+    }
+    document.querySelectorAll('[data-reveal]:not([data-seen]), [data-count]:not([data-seen])').forEach(el => {
+      el.setAttribute('data-seen', '1');
+      if (el.hasAttribute('data-reveal') || !el.closest('[data-reveal]')) this._io.observe(el);
+    });
+  }
+  countUp(n) {
+    if (n.dataset.done) return; n.dataset.done = '1';
+    const target = +n.dataset.count, t0 = performance.now(), dur = 1100;
+    const step = now => {
+      const p = Math.min(1, (now - t0) / dur), v = Math.round(target * (1 - Math.pow(1 - p, 3)));
+      n.textContent = v.toLocaleString('en-US');
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  hash(s) { let h = 7; for (const c of s) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; }
+  pick(arr, i) { return arr[(this._seed + i) % arr.length]; }
+
+  selectedAddresses() {
+    const r = this.state.rcpt, R = Component.R;
+    return ['hailey','record','county','bellevue'].filter(k => r[k]).flatMap(k => R[k]);
+  }
+  buildBody() {
+    const L = this.L, s = this.state;
+    this._seed = this.hash((s.name + '|' + s.email).toLowerCase());
+    const nm = s.name.trim() || L.fallbackName, town = s.town || L.fallbackTown;
+    const parts = [L.greet[s.rcpt.bellevue ? 1 : 0], this.pick(L.open, 0).replace('{name}', nm).replace('{town}', town)];
+    if (s.reasons.length) s.reasons.forEach((k, i) => parts.push(this.pick(L.reasons[k], i + 1)));
+    else parts.push(L.generic);
+    if (s.personal.trim()) parts.push(s.personal.trim());
+    parts.push(this.pick(L.close, s.reasons.length + 3));
+    parts.push(L.thanks + ',\n' + nm + '\n' + town);
+    return parts.join('\n\n');
+  }
+  subject() { this._seed = this.hash((this.state.name + '|' + this.state.email).toLowerCase()); return this.pick(this.L.subject, 9); }
+
+  validEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e.trim()); }
+
+  mailtoHref(body, subject) {
+    const to = this.selectedAddresses();
+    return 'mailto:' + to.join(',') + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+
+  static ENDPOINT = 'https://gialgfuhvzxcdrcwjrqn.supabase.co/functions/v1/send-letter';
+  endpoint() { const u = (this.props.endpointUrl ?? '').trim(); return u === 'mailto' ? '' : (u || Component.ENDPOINT); }
+  utm() { const q = new URLSearchParams(location.search), o = {}; ['utm_source','utm_medium','utm_campaign','utm_content','fbclid'].forEach(k => { if (q.get(k)) o[k] = q.get(k); }); return Object.keys(o).length ? o : null; }
+  payload(body, subject) {
+    const s = this.state;
+    return { type: 'letter', name: s.name.trim(), email: s.email.trim(), town: s.town, reasons: s.reasons, subject, body, to: this.selectedAddresses(), alerts: s.alerts, lang: this.lang, page: location.href.split('#')[0], utm: this.utm(), website: s.website, turnstile: this._tsToken || null, ts: new Date().toISOString() };
+  }
+  mountTurnstile() {
+    const key = (this.props.turnstileSiteKey || '').trim();
+    if (!key || !window.turnstile) return;
+    document.querySelectorAll('[data-turnstile]:not([data-ts])').forEach(el => {
+      el.setAttribute('data-ts', '1');
+      window.turnstile.render(el, { sitekey: key, size: 'flexible', theme: 'light', callback: t => { this._tsToken = t; }, 'expired-callback': () => { this._tsToken = null; } });
+    });
+  }
+  pixel(evt, data) { if (this.props.metaPixelId && window.fbq) { try { window.fbq(evt === 'PageView' ? 'track' : 'track', evt === 'PageView' ? 'PageView' : 'Lead', data || {}, data && data.eventID ? { eventID: data.eventID } : undefined); } catch (e) {} } }
+
+  async send() {
+    const L = this.L, s = this.state;
+    if (!s.name.trim() || !this.validEmail(s.email)) return this.setState({ error: L.needName });
+    if (!this.selectedAddresses().length) return this.setState({ error: L.needRcpt });
+    const body = s.bodyOverride ?? this.buildBody(), subject = this.subject();
+    const url = this.endpoint();
+    if (!url) { window.location.href = this.mailtoHref(body, subject); return this.setState({ status: 'sent', sentVia: 'mail', error: '', localSent: s.localSent + 1 }); }
+    this.setState({ status: 'sending', error: '' });
+    try {
+      const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.payload(body, subject)) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.error || 'bad status');
+      if (j.event_id && window.fbq && this.props.metaPixelId) { try { window.fbq('track', 'Lead', { content_name: 'letter_sent' }, { eventID: j.event_id }); } catch (e) {} }
+      if (window.turnstile) { try { window.turnstile.reset(); } catch (e) {} }
+      this._tsToken = null;
+      this.setState({ status: 'sent', sentVia: 'api', localSent: s.localSent + 1 });
+    } catch (e) {
+      const m = String(e.message || '');
+      this.setState({ status: 'idle', error: m === 'rate' ? (this.lang === 'es' ? 'Demasiadas cartas desde esta conexión. Intenta en una hora.' : 'Too many letters from this connection. Try again in an hour.') : m === 'captcha' ? (this.lang === 'es' ? 'Completa la verificación y vuelve a intentar.' : 'Complete the verification and try again.') : L.sendFail });
+    }
+  }
+  openMail() {
+    const body = this.state.bodyOverride ?? this.buildBody();
+    window.location.href = this.mailtoHref(body, this.subject());
+  }
+  async subscribe() {
+    const L = this.L, e = this.state.alertEmail;
+    if (!this.validEmail(e)) return this.setState({ subStatus: 'fail' });
+    const url = this.endpoint();
+    if (!url) return this.setState({ subStatus: 'noend' });
+    try {
+      const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ type: 'alert', email: e.trim(), lang: this.lang, page: location.href, ts: new Date().toISOString() }) });
+      if (!r.ok) throw new Error();
+      this.setState({ subStatus: 'ok' });
+    } catch (err) { this.setState({ subStatus: 'fail' }); }
+  }
+  copy(text, key) {
+    navigator.clipboard?.writeText(text);
+    this.setState({ [key]: true }); setTimeout(() => this.setState({ [key]: false }), 1800);
+  }
+
+  renderVals() {
+    const L = this.L, s = this.state, lang = this.lang;
+    const sel = { bg: '#C4501F', fg: '#fff', bc: '#C4501F' }, un = { bg: 'transparent', fg: '#F3EFE4', bc: '#4A6353' }, dim = { bg: 'transparent', fg: '#6E7F75', bc: '#2F4436' };
+    const mkReasons = l => Component.KEYS.map(k => {
+      const on = s.reasons.includes(k), full = !on && s.reasons.length >= 3, c = on ? sel : full ? dim : un;
+      return { key: k, label: Component.L[l].labels[k], on, ...c, toggle: () => { if (full) return; this.flashPreview(); this.setState(st => ({ reasons: on ? st.reasons.filter(x => x !== k) : [...st.reasons, k] })); } };
+    });
+    const mkRcpt = l => Component.L[l].rcpt.map(r => ({ ...r, on: !!s.rcpt[r.key], toggle: () => { this.flashPreview(); this.setState(st => ({ rcpt: { ...st.rcpt, [r.key]: !st.rcpt[r.key] } })); } }));
+    const addrs = this.selectedAddresses();
+    const body = s.bodyOverride ?? this.buildBody();
+    const total = (this.props.lettersSent || 0) + s.localSent;
+    const smsHref = 'sms:?&body=' + encodeURIComponent(L.smsText + location.href.split('#')[0]);
+    const subMap = { idle: L.subscribe, ok: L.subscribed, fail: L.subFail, noend: L.subNoEndpoint };
+    return {
+      isEn: lang === 'en', isEs: lang === 'es',
+      wide: s.wide !== false, stickyPos: s.wide === false ? 'static' : 'sticky',
+      headerCta: s.wide === false ? (lang === 'es' ? 'Escribir' : 'Email them') : (lang === 'es' ? 'Escribe al concejo' : 'Email the council'),
+      setEn: () => this.setState({ lang: 'en', bodyOverride: null }), setEs: () => this.setState({ lang: 'es', bodyOverride: null }),
+      reasonsEn: mkReasons('en'), reasonsEs: mkReasons('es'), recipientsEn: mkRcpt('en'), recipientsEs: mkRcpt('es'),
+      name: s.name, email: s.email, town: s.town, personal: s.personal, alerts: s.alerts,
+      website: s.website || '', setWebsite: e => this.setState({ website: e.target.value }),
+      setName: e => this.setState({ name: e.target.value }), setEmail: e => this.setState({ email: e.target.value }),
+      setTown: e => this.setState({ town: e.target.value }), setPersonal: e => this.setState({ personal: e.target.value }),
+      toggleAlerts: () => this.setState(st => ({ alerts: !st.alerts })),
+      letterBody: body, setBody: e => this.setState({ bodyOverride: e.target.value }), edited: s.bodyOverride != null, resetBody: () => this.setState({ bodyOverride: null }),
+      subject: this.subject(), toPreview: addrs.join(', '), toCountText: L.toCount.replace('{n}', addrs.length),
+      showForm: s.status !== 'sent', showSuccess: s.status === 'sent', sending: s.status === 'sending',
+      sendLabel: s.status === 'sending' ? L.sending : L.sendLabel, hasError: !!s.error, errorMsg: s.error,
+      send: () => this.send(), openMail: () => this.openMail(), sendAnother: () => this.setState({ status: 'idle', bodyOverride: null, personal: '', reasons: [], name: '', email: '' }),
+      successText: (s.sentVia === 'mail' ? L.successMail : L.success).replace('{n}', addrs.length),
+      smsHref, copyLink: () => this.copy(location.href.split('#')[0], 'copied'), copyLabel: s.copied ? L.copied : L.copyLink,
+      copyBody: () => this.copy(body, 'copiedBody'), copyBodyLabel: s.copiedBody ? L.copiedBody : L.copyBody,
+      showCount: total >= 25, countText: L.count.replace('{n}', total.toLocaleString('en-US')),
+      nextMeeting: (() => { const d = this.meetingDate(); if (!d) return ''; return new Intl.DateTimeFormat(lang === 'es' ? 'es-US' : 'en-US', { weekday: 'long', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: 'America/Boise' }).format(d); })(),
+      daysToMeeting: (() => { const d = this.meetingDate(); if (!d) return '—'; const ms = d - Date.now(); if (ms < 0) return lang === 'es' ? 'Pronto' : 'Soon'; const days = Math.floor(ms / 86400000); if (days >= 1) return String(days); const hrs = Math.max(1, Math.floor(ms / 3600000)); return String(hrs); })(),
+      daysLabel: (() => { const d = this.meetingDate(); if (!d) return ''; const ms = d - Date.now(); if (ms < 0) return lang === 'es' ? 'fecha por confirmar' : 'next date TBD'; const days = Math.floor(ms / 86400000); if (days >= 1) return lang === 'es' ? (days === 1 ? 'día' : 'días') : (days === 1 ? 'day' : 'days'); const hrs = Math.max(1, Math.floor(ms / 3600000)); return lang === 'es' ? (hrs === 1 ? 'hora' : 'horas') : (hrs === 1 ? 'hour' : 'hours'); })(),
+      icsHref: this.icsHref(),
+      alertEmail: s.alertEmail, setAlertEmail: e => this.setState({ alertEmail: e.target.value, subStatus: 'idle' }), subscribe: () => this.subscribe(), subscribeLabel: subMap[s.subStatus]
+    };
+  }
+}
+</script>
+</body>
+</html>
