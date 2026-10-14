@@ -53,23 +53,34 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
   </div>
 </header>
 
-<section id="top" data-screen-label="Hero" style="max-width:1160px; width:100%; margin:0 auto; padding:clamp(28px, 5vw, 56px) 20px 40px; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:clamp(20px, 4vw, 36px); align-items:center;">
-  <div>
-    <p style="margin:0 0 18px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600; animation:rise .6s ease both;">Hailey, Idaho · Blaine Crossing annexation</p>
-    <h1 style="margin:0 0 22px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.9; letter-spacing:-.01em; font-size:clamp(52px, 11vw, 120px); animation:rise .7s .08s ease both;">108 acres.<br><span data-count="614">614</span> homes.<br><span style="color:#C4501F;">Three votes.</span></h1>
-    <p style="margin:0 0 28px; font-size:clamp(17px, 1.6vw, 20px); line-height:1.5; max-width:560px; text-wrap:pretty; animation:rise .7s .16s ease both;">Oppenheimer Development Corp. wants the City of Hailey to annex 108 acres of Flying Hat Ranch between Hailey and Bellevue: 614 housing units, 280,000 square feet of industrial space, retail, and a 100-room hotel. The Hailey City Council decides. Your email goes on the official record.</p>
-    <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; animation:rise .7s .24s ease both;">
-      <a href="#letter" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:22px; letter-spacing:.03em; text-transform:uppercase; padding:14px 24px; border-radius:6px; animation:pulse 2.4s 1.2s ease-out 3;">Email the council · 2 minutes</a>
-      <a href="#stakes" style="text-decoration:none; color:#17231C; font-family:'Barlow Condensed'; font-weight:700; font-size:22px; letter-spacing:.03em; text-transform:uppercase; padding:14px 18px; border:1.5px solid #17231C; border-radius:6px;">What's at stake</a>
+<section id="top" data-screen-label="Hero" style="max-width:1160px; width:100%; margin:0 auto; padding:clamp(24px, 4vw, 48px) 20px 40px;">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:clamp(20px, 4vw, 40px); align-items:start;">
+    <div style="animation:rise .8s .1s ease both; position:sticky; top:72px;">
+      <div style="aspect-ratio:4/3; max-height:min(640px, 72vh);">
+        <image-slot id="big-map" shape="rounded" radius="14" fit="contain" placeholder="Drop Brett's Big Picture map (Map 10_5.png)"></image-slot>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:14px 20px; margin-top:12px; font-size:13px; color:#3D4842;">
+        <span style="display:inline-flex; align-items:center; gap:7px;"><span style="width:12px; height:12px; border-radius:3px; background:#17231C; display:inline-block;"></span>Approved, in development</span>
+        <span style="display:inline-flex; align-items:center; gap:7px;"><span style="width:12px; height:12px; border-radius:3px; background:#2E7D4F; display:inline-block;"></span>Active applications</span>
+        <span style="display:inline-flex; align-items:center; gap:7px;"><span style="width:12px; height:12px; border-radius:3px; background:#9CCB8E; display:inline-block;"></span>Anticipated annexation or development agreement</span>
+      </div>
     </div>
-    <sc-if value="{{ showCount }}" hint-placeholder-val="{{ false }}">
-      <p style="margin:20px 0 0; font-size:15px; color:#4F6B4E; font-weight:600;">{{ countText }}</p>
-    </sc-if>
-  </div>
-  <div style="position:relative; aspect-ratio:4/5; max-height:min(620px, 70vh); animation:rise .8s .2s ease both;">
-    <image-slot id="hero-creek" shape="rounded" radius="14" placeholder="Drop a photo: Silver Creek or Flying Hat Ranch at dusk" src="https://bloximages.chicago2.vip.townnews.com/mtexpress.com/content/tncms/assets/v3/editorial/0/9a/09a891e9-b18e-4587-bd28-a25fe1ee541b/6643bda1233d5.image.jpg?resize=1000%2C1250&order=resize" credit="Photo: Idaho Mountain Express (placeholder, permission pending)" credit-href="https://www.mtexpress.com/news/hailey/water-concerns-raised-ahead-of-blaine-crossing-open-house/article_7960f431-1cd5-4e8c-a690-011025b87850.html"></image-slot>
-    <div style="position:absolute; left:14px; bottom:14px; right:14px; display:flex; justify-content:flex-end; pointer-events:none;">
-      <span style="background:rgba(23,35,28,.82); color:#F3EFE4; font-size:13px; padding:6px 10px; border-radius:4px;">Flying Hat Ranch, east of Highway 75</span>
+    <div>
+      <p style="margin:0 0 16px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600; animation:rise .6s ease both;">Wood River Valley · Blaine County, Idaho</p>
+      <h1 style="margin:0 0 20px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.9; letter-spacing:-.01em; font-size:clamp(48px, 7.5vw, 92px); animation:rise .7s .08s ease both;">1,066 homes.<br>Two councils.<br><span style="color:#C4501F;">Your call.</span></h1>
+      <p style="margin:0 0 22px; font-size:clamp(17px, 1.5vw, 19px); line-height:1.5; max-width:560px; text-wrap:pretty; animation:rise .7s .16s ease both;">Hailey is weighing 614 units on Flying Hat Ranch. Bellevue is weighing 452 more on Gannett Ranch. Add what’s already approved and platted across the valley and it comes to 4,975 new houses, about 11,940 more people, in a county of 25,000. Nobody has shown we have the water.</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:0 0 24px; animation:rise .7s .2s ease both;">
+        <a href="#projects" style="text-decoration:none; color:inherit; border-top:3px solid #C4501F; padding-top:10px;"><span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(44px, 6vw, 68px); line-height:.9; display:block;"><span data-count="614">614</span></span><span style="font-size:14px; color:#3D4842; display:block; margin-top:6px; line-height:1.35;">Blaine Crossing · Oppenheimer · City of Hailey</span></a>
+        <a href="#projects" style="text-decoration:none; color:inherit; border-top:3px solid #2F6E87; padding-top:10px;"><span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(44px, 6vw, 68px); line-height:.9; display:block;"><span data-count="452">452</span></span><span style="font-size:14px; color:#3D4842; display:block; margin-top:6px; line-height:1.35;">Gannett Ranch · Steadfast · City of Bellevue</span></a>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; animation:rise .7s .26s ease both;">
+        <a href="#petitions"  style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(18px, 2vw, 22px); letter-spacing:.03em; text-transform:uppercase; padding:14px 20px; border-radius:6px; min-height:52px; display:inline-flex; align-items:center; justify-content:center; flex:1 1 180px; text-align:center;">Sign the petitions</a>
+        <a href="#letter"  style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(18px, 2vw, 22px); letter-spacing:.03em; text-transform:uppercase; padding:14px 20px; border-radius:6px; min-height:52px; display:inline-flex; align-items:center; justify-content:center; flex:1 1 180px; text-align:center;">Email the councils</a>
+        <a href="https://www.mtexpress.com/site/forms/" target="_blank" rel="noopener" style="text-decoration:none; background:transparent; color:#17231C; border:1.5px solid #17231C; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(18px, 2vw, 22px); letter-spacing:.03em; text-transform:uppercase; padding:14px 20px; border-radius:6px; min-height:52px; display:inline-flex; align-items:center; justify-content:center; flex:1 1 180px; text-align:center;">Write the Express</a>
+      </div>
+      <sc-if value="{{ showCount }}" hint-placeholder-val="{{ false }}">
+        <p style="margin:18px 0 0; font-size:15px; color:#4F6B4E; font-weight:600;">{{ countText }}</p>
+      </sc-if>
     </div>
   </div>
 </section>
@@ -78,8 +89,8 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
   <div style="max-width:1160px; margin:0 auto;">
     <div style="max-width:720px; margin-bottom:36px;">
       <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#A9C1A5; font-weight:600;">Two minutes. Every address that matters.</p>
-      <h2 style="margin:0 0 14px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Tell the Hailey City Council: vote no.</h2>
-      <p style="margin:0; font-size:18px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Pick what worries you, add your name, and we build a letter in your words. It goes to the mayor, all four council members, the planning department that keeps the official record, and the county. Identical form letters get discounted. Yours won't be.</p>
+      <h2 style="margin:0 0 14px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Tell Hailey and Bellevue: vote no.</h2>
+      <p style="margin:0; font-size:18px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Pick what worries you, add your name, and we build a letter in your words. Pick the project, or both, and it goes to the right mayor, council, planning record, and the county. Identical form letters get discounted. Yours won't be.</p>
     </div>
 
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:28px; align-items:start;">
@@ -88,6 +99,19 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
         <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
           <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;">
             <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">1</span>
+            <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">Which project?</h3>
+          </div>
+          <p style="margin:0 0 16px; color:#A9B3AC; font-size:15px;">Pick one or both. Recipients update to match.</p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:10px;">
+            <sc-for list="{{ projectsEn }}" as="p" hint-placeholder-count="2">
+              <button onClick="{{ p.toggle }}" style="border:1.5px solid; border-radius:10px; padding:12px 14px; text-align:left; min-height:60px; transition:all .18s ease; background:{{ p.bg }}; color:{{ p.fg }}; border-color:{{ p.bc }};"><span style="display:block; font-family:'Barlow Condensed'; font-weight:700; font-size:20px; text-transform:uppercase; letter-spacing:.02em;">{{ p.label }}</span><span style="display:block; font-size:13px; opacity:.85; margin-top:2px;">{{ p.detail }}</span></button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;">
+            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">2</span>
             <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">What matters to you?</h3>
           </div>
           <p style="margin:0 0 16px; color:#A9B3AC; font-size:15px;">Pick up to three. Each one adds a paragraph.</p>
@@ -100,7 +124,7 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
 
         <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
           <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:16px;">
-            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">2</span>
+            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">3</span>
             <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">About you</h3>
           </div>
           <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
@@ -119,7 +143,7 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
             <option value="Lincoln County">Lincoln County (downstream)</option>
             <option value="the Wood River Valley">Somewhere else in the valley</option>
           </select>
-          <textarea value="{{ personal }}" onChange="{{ setPersonal }}" rows="2" placeholder="Optional: one line in your own words. How long you've lived here, what you do, what you'd lose." style="margin-top:12px; width:100%; padding:12px 14px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px; resize:vertical; line-height:1.45;"></textarea>
+          <textarea value="{{ personal }}" onChange="{{ setPersonal }}" rows="2" placeholder="Optional: one line in your own words. What you do here, what you'd lose." style="margin-top:12px; width:100%; padding:12px 14px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px; resize:vertical; line-height:1.45;"></textarea>
           <label style="display:flex; gap:10px; align-items:center; margin-top:14px; font-size:15px; color:#D7D9CF; cursor:pointer;">
             <input type="checkbox" checked="{{ alerts }}" onChange="{{ toggleAlerts }}" style="width:20px; height:20px; accent-color:#C4501F;">
             Email me when there's a hearing or a deadline
@@ -128,10 +152,10 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
 
         <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
           <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;">
-            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">3</span>
+            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">4</span>
             <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">Who gets it</h3>
           </div>
-          <p style="margin:0 0 14px; color:#A9B3AC; font-size:15px;">The Hailey Planning &amp; Zoning Commission reads comments through the planning department's record.</p>
+          <p style="margin:0 0 14px; color:#A9B3AC; font-size:15px;">Set from the projects you picked. Uncheck anyone you like. Planning departments keep the official record the councils and P&amp;Z rely on.</p>
           <div style="display:flex; flex-direction:column; gap:10px;">
             <sc-for list="{{ recipientsEn }}" as="r" hint-placeholder-count="4">
               <label style="display:flex; gap:12px; align-items:flex-start; padding:12px 14px; border:1px solid #2F4436; border-radius:8px; cursor:pointer; min-height:44px;">
@@ -197,7 +221,7 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
 <section id="stakes" data-screen-label="Stakes" style="max-width:1160px; width:100%; margin:0 auto; padding:72px 20px 40px;">
   <div style="max-width:720px; margin-bottom:40px;">
     <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600;">What's at stake</p>
-    <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">A development this size reaches every part of the valley. And downstream.</h2>
+    <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Development on this scale reaches every part of the valley. And downstream.</h2>
   </div>
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1px; background:#D9D2C1; border:1px solid #D9D2C1; border-radius:12px; overflow:hidden;">
     <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;">
@@ -206,14 +230,14 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
       <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Irrigated fields like this one are the second-largest source of water going back into the aquifer. Pave it, switch its rights to year-round city use, and you lose the recharge and add twelve months of pumping. The basin can't take it: in 2021 the state shut off 140 irrigators on 23,000 acres of the Bellevue Triangle, Lincoln County ranchers sold herds, and Silver Creek closed to fishing for the first time ever.</p>
     </div>
     <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .08s ease, transform .6s .08s ease;">
-      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#C4501F;"><span data-count="1400">1,400</span> cars</p>
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#C4501F;"><span data-count="2132">2,132</span> cars</p>
       <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Traffic</h3>
-      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">The north phase alone means roughly 1,840 more people and 1,400 more vehicles on two-lane Highway 75 at Hailey's southern entrance.</p>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">The two annexations together mean roughly 2,800 more people and 2,132 more vehicles on two-lane Highway 75, which is also Main Street in Bellevue.</p>
     </div>
     <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .16s ease, transform .6s .16s ease;">
-      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#4F6B4E;">21 → <span data-count="614">614</span></p>
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#4F6B4E;">60 → <span data-count="1066">1,066</span></p>
       <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Farmland</h3>
-      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">This is working farmland. Under today's county zoning it could hold 21 homes at most. Annexation turns 21 into 614, plus a hotel and 280,000 square feet of industrial space. As towns take more water, farmers fallow more fields.</p>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Both sites are working farmland. Under today's county zoning they could hold about 60 homes between them: 21 on Flying Hat, 39 on Gannett Ranch. Annexation turns 60 into 1,066, plus a hotel, self-storage, and more than 400,000 square feet of industrial space. As towns take more water, farmers fallow more fields.</p>
     </div>
     <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .24s ease, transform .6s .24s ease;">
       <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#4F6B4E;">Two towns</p>
@@ -221,26 +245,42 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
       <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">The open ground between Hailey and Bellevue is wildlife habitat, a fire break, a place for water to soak back into the aquifer, and the reason the two towns are still two towns. Blaine County voters already tax themselves to protect ground like this: the Land, Water and Wildlife levy has helped buy conservation easements in the Bellevue Triangle. It's the only county program of its kind in Idaho.</p>
     </div>
     <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .32s ease, transform .6s .32s ease;">
-      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#C4501F;">3.5 miles</p>
-      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Downtown</h3>
-      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">A second commercial hub 3.5 miles from Main Street competes with the businesses downtown Hailey already has, and pulls people and money away from the center.</p>
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#C4501F;">Two new hubs</p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Downtowns</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Blaine Crossing puts a commercial hub 3.5 miles from downtown Hailey and 1.5 from downtown Bellevue. Gannett Ranch puts a market, commercial, and a civic center 1.5 miles south of Bellevue's Main Street. Both compete with the businesses the towns already have.</p>
     </div>
     <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .4s ease, transform .6s .4s ease;">
       <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#2F6E87;">Who pays?</p>
       <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Services</h3>
-      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">There is no city infrastructure on that land today. Roads, sewer, water, police, fire, schools, trails: the cost to existing residents is unknown, and it lasts long after the developer is gone.</p>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">There is no city infrastructure on either site today. Gannett Ranch would have to hook into Bellevue's water, sewer, and streets, and the city has to prove it can serve that. Roads, police, fire, schools, trails: the cost to existing residents is unknown, and it lasts long after the developers are gone.</p>
     </div>
   </div>
 </section>
 
-<section data-screen-label="Map" style="max-width:1160px; width:100%; margin:0 auto; padding:24px 20px 72px; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px; align-items:center;">
-  <div style="aspect-ratio:16/11;">
-    <image-slot id="site-map" shape="rounded" radius="12" fit="contain" placeholder="Drop the site map from the Hailey meeting packet, or an aerial of the ranch" src="https://bloximages.chicago2.vip.townnews.com/mtexpress.com/content/tncms/assets/v3/editorial/e/6b/e6b88d48-5c73-4aba-bdfd-79d00ecefe08/6a48361469082.image.png?resize=1200%2C900&order=resize" credit="Developer's plan, from Hailey public meeting documents" credit-href="https://haileycityhall.org/community-development/active-land-use-applications/"></image-slot>
+<section id="projects" data-screen-label="Projects" style="max-width:1160px; width:100%; margin:0 auto; padding:24px 20px 72px;">
+  <div style="max-width:720px; margin-bottom:32px;">
+    <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600;">Two requests, two councils</p>
+    <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">What’s on the table.</h2>
   </div>
-  <div>
-    <h2 style="margin:0 0 14px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(34px, 4.5vw, 56px);">This is phase one.</h2>
-    <p style="margin:0 0 14px; font-size:17px; line-height:1.55; text-wrap:pretty;">The 108 acres before Hailey are the northern piece. The developer's own map shows another 119 acres to the south to be annexed into Bellevue later. Read together, it is a new town of its own at the entrance to the valley.</p>
-    <p style="margin:0; font-size:17px; line-height:1.55; text-wrap:pretty;">If Hailey says no, the land stays under Blaine County zoning: a maximum of 21 homes.</p>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px;">
+    <div data-reveal style="background:#fff; border:1px solid #D9D2C1; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;">
+      <div style="aspect-ratio:16/11; background:#E9E3D3;"><image-slot id="plan-blaine" shape="rect" fit="contain" placeholder="Drop the Oppenheimer site plan (site plan July 2026.pdf, exported as image)"></image-slot></div>
+      <div style="padding:22px 24px 26px; border-top:3px solid #C4501F;">
+        <p style="margin:0 0 4px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">Oppenheimer Development Corp. · City of Hailey</p>
+        <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:800; font-size:34px; text-transform:uppercase; line-height:1;">Blaine Crossing</h3>
+        <p style="margin:0 0 12px; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Annex 108 acres of Flying Hat Ranch between Hailey and Bellevue: 614 housing units, 280,000 square feet of industrial space, retail and service commercial, recreation facilities, and a 100-room hotel. Oppenheimer intends to seek annexation of the remaining 120 acres into Bellevue later.</p>
+        <p style="margin:0; font-size:15px; font-weight:600; color:#C4501F;">If Hailey says no: county zoning allows 21 houses.</p>
+      </div>
+    </div>
+    <div data-reveal style="background:#fff; border:1px solid #D9D2C1; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s .1s ease, transform .6s .1s ease;">
+      <div style="aspect-ratio:16/11; background:#E9E3D3;"><image-slot id="plan-gannett" shape="rect" fit="contain" placeholder="Drop the Steadfast site plan, phase 3 page (Site plan.pdf, exported as image)"></image-slot></div>
+      <div style="padding:22px 24px 26px; border-top:3px solid #2F6E87;">
+        <p style="margin:0 0 4px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">Steadfast Company · City of Bellevue</p>
+        <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:800; font-size:34px; text-transform:uppercase; line-height:1;">Gannett Ranch</h3>
+        <p style="margin:0 0 12px; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Annex 191 acres of productive farmland south of Bellevue: 452 housing units, a civic center, amphitheater, market, commercial, light industrial, self-storage, and 150,000 square feet of flex industrial. It would hook into Bellevue’s water, wastewater, and streets. The city must verify it can serve that capacity. Filed late August 2026.</p>
+        <p style="margin:0; font-size:15px; font-weight:600; color:#2F6E87;">If Bellevue says no: county zoning allows about 39 houses.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -257,7 +297,7 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
       </div>
       <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:0; background:#F3EFE4; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s .08s ease, transform .6s .08s ease;">
         <div style="padding:24px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">The developer says</p><p style="margin:0; font-size:19px; line-height:1.4; font-style:italic;">“This is the housing your community needs.”</p></div>
-        <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">The record</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">About 900 units are already approved across the county and its cities. Another 1,940 platted lots sit undeveloped. None of the 614 units proposed here carry deed restrictions or a price tied to local wages.</p></div>
+        <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">The record</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">About 1,330 units are already approved across the county and its cities. Another 1,940 platted lots sit undeveloped. None of the 1,066 units proposed in these two annexations carry deed restrictions or a price tied to local wages.</p></div>
       </div>
       <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:0; background:#F3EFE4; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s .16s ease, transform .6s .16s ease;">
         <div style="padding:24px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">The developer says</p><p style="margin:0; font-size:19px; line-height:1.4; font-style:italic;">“The donated fields will be open space between the towns.”</p></div>
@@ -269,6 +309,22 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
         <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">The record</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">Those are irrigation rights. Under the 2021 settlement, Triangle irrigators pump only May 1 to Sept. 15, and water from fallowed fields is supposed to go back into the aquifer as recharge. A city uses water twelve months a year and a parking lot recharges nothing. Moving the rights takes state approval, and the volume on paper is not the question. When and where the water comes out is.</p></div>
       </div>
     </div>
+    <details data-screen-label="Housing" style="margin-top:28px; background:#F3EFE4; border-radius:12px; overflow:hidden;">
+      <summary style="list-style:none; cursor:pointer; padding:22px 24px; display:flex; justify-content:space-between; align-items:center; gap:16px; min-height:44px;">
+        <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(26px, 3.5vw, 36px); text-transform:uppercase; line-height:1;">Affordable housing, debunked</span>
+        <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:32px; color:#C4501F; line-height:1;">+</span>
+      </summary>
+      <div style="padding:0 24px 26px; display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
+        <div style="font-size:16px; line-height:1.55; color:#3D4842; display:flex; flex-direction:column; gap:12px;"><p style="margin:0;">Everyone here knows the housing problem. The gap between what people earn and what it costs to build is so wide that we cannot build our way out of it. More market-rate units make it worse: a bigger population needs more workers, who need more housing.</p><p style="margin:0;">Blaine County’s median family income is about $92,000 for a household of 2.4 people. At current interest rates, an affordable two-bedroom condo for that family cannot cost more than roughly $327,000. All-in costs to build one in Hailey are at least $650,000. No market-rate condo is for sale at the affordable number, and none can be built for it.</p><p style="margin:0; font-weight:600; color:#17231C;">So why would a council member vote to annex 614 or 452 more market-rate units?</p></div>
+        <div style="background:#fff; border-radius:10px; padding:22px; font-family:'Barlow Condensed'; text-transform:uppercase;">
+          <p style="margin:0 0 4px; font-size:14px; font-weight:700; letter-spacing:.06em; color:#8A938D;">Cost to build a 2BR condo in Hailey</p>
+          <p style="margin:0 0 16px; font-size:clamp(44px, 6vw, 64px); font-weight:800; line-height:1; color:#C4501F;">$650k</p>
+          <p style="margin:0 0 4px; font-size:14px; font-weight:700; letter-spacing:.06em; color:#8A938D;">What the median family can afford</p>
+          <p style="margin:0; font-size:clamp(44px, 6vw, 64px); font-weight:800; line-height:1; color:#4F6B4E;">$327k</p>
+          <p style="margin:16px 0 0; font-family:'Source Serif 4', Georgia, serif; text-transform:none; font-size:13px; color:#5B6660;">Source: Perry Boyle, The Ketchum Sun. Fannie Mae affordability calculator at current rates; all-in Hailey construction costs.</p>
+        </div>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -276,17 +332,17 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
   <div style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center;">
     <div>
       <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#A9C1A5; font-weight:600;">The big picture</p>
-      <h2 style="margin:0 0 18px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Blaine Crossing isn't the only one.</h2>
-      <p style="margin:0 0 14px; font-size:17px; line-height:1.55; color:#D7D9CF; text-wrap:pretty;">Add up what's already approved, what's platted and waiting, and what's coming through annexations and development agreements across the valley, and you get about 4,400 more houses. At 2.3 people per house, that's roughly 10,000 more people in a county of 25,000.</p>
+      <h2 style="margin:0 0 18px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">These two aren't the only ones.</h2>
+      <p style="margin:0 0 14px; font-size:17px; line-height:1.55; color:#D7D9CF; text-wrap:pretty;">Add up what's already approved, what's platted and waiting, and what's coming through annexations and development agreements across the valley, and you get 4,975 more houses. At 2.4 people per house, that's about 11,940 more people and roughly 10,000 more cars, in a county of 25,000. That leaves out Oppenheimer's second phase and anything on Peregrine Ranch.</p>
       <p style="margin:0 0 24px; font-size:17px; line-height:1.55; color:#D7D9CF; text-wrap:pretty;">Nobody has answered three questions: Do we have the water? Who pays? Who benefits?</p>
       <a href="#letter" style="text-decoration:none; display:inline-block; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:20px; letter-spacing:.03em; text-transform:uppercase; padding:13px 22px; border-radius:6px;">Ask them yourself</a>
     </div>
     <div style="display:grid; gap:2px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase;">
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Approved or under construction</span><span data-count="900" style="font-size:44px; line-height:1;">900</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Approved or under construction</span><span data-count="1330" style="font-size:44px; line-height:1;">1,330</span></div>
       <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Platted lots, still empty</span><span data-count="1940" style="font-size:44px; line-height:1;">1,940</span></div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Annexations &amp; development agreements</span><span data-count="1583" style="font-size:44px; line-height:1;">1,583</span></div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:20px 0 6px;"><span style="font-size:20px; font-weight:700; color:#F3EFE4; letter-spacing:.04em;">More houses</span><span data-count="4423" style="font-size:72px; line-height:1; color:#C4501F;">4,423</span></div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:6px 0;"><span style="font-size:20px; font-weight:700; color:#F3EFE4; letter-spacing:.04em;">More people</span><span style="font-size:44px; line-height:1; color:#A9C1A5;">≈ <span data-count="10172">10,172</span></span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Annexations &amp; development agreements</span><span data-count="1705" style="font-size:44px; line-height:1;">1,705</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:20px 0 6px;"><span style="font-size:20px; font-weight:700; color:#F3EFE4; letter-spacing:.04em;">More houses</span><span data-count="4975" style="font-size:72px; line-height:1; color:#C4501F;">4,975</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:6px 0;"><span style="font-size:20px; font-weight:700; color:#F3EFE4; letter-spacing:.04em;">More people</span><span style="font-size:44px; line-height:1; color:#A9C1A5;">≈ <span data-count="11940">11,940</span></span></div>
     </div>
   </div>
 </section>
@@ -304,41 +360,58 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
     <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“Enough is enough. We've been overwhelmed by rapid development, congestion, construction, and traffic jams. Who benefits from it? It's time for the community to take care of the community. Our leadership should be accountable to us, not developers.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Wood River Valley native and business owner</footer></blockquote>
     <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“I used to love the small rural community feel of the Wood River Valley, but with the recent rapid growth I find it unrecognizable.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Visitor</footer></blockquote>
   </div>
+  <div style="max-width:1160px; margin:0 auto; padding:24px 20px 0; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+    <a href="./public-comment-hailey.pdf" target="_blank" rel="noopener" style="text-decoration:none; background:#17231C; color:#F3EFE4; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:12px 18px; border-radius:6px; min-height:48px; display:inline-flex; align-items:center;">Read the record: Hailey public comment (PDF)</a>
+    <span style="font-size:14px; color:#5B6660;">Every comment submitted to Hailey so far. The city makes it hard to find. We don’t.</span>
+  </div>
 </section>
 
 <section id="act" data-screen-label="Other actions" style="background:#17231C; color:#F3EFE4; padding:80px 20px 96px;">
   <div style="max-width:1160px; margin:0 auto;">
     <div style="max-width:760px; margin-bottom:28px;">
       <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#A9C1A5; font-weight:600;">After you've sent your letter</p>
-      <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Three more things that move votes.</h2>
+      <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Four things that move votes.</h2>
     </div>
     <div style="display:flex; flex-direction:column; border-bottom:1px solid #2F4436;">
-    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s 0s ease, transform .7s 0s ease, border-color .3s ease;">
+    <div id="petitions" data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease, border-color .3s ease;">
       <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">01</span>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
         <div>
-          <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Show up</h3>
-          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Hailey City Council meets the second and fourth Monday at 5:30 pm, Hailey City Hall, 115 S. Main St. Council members count the room.</p>
+          <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Sign both petitions</h3>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Thirty seconds each. One says no to these annexations. The other asks every elected official in the valley for a time out: a pause on subdivisions and annexations until there is a real water budget and an honest count of what growth costs. Scan or tap.</p>
         </div>
-        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-family:'Barlow Condensed'; font-weight:800; font-size:64px; line-height:.9;">{{ daysToMeeting }}</span><span style="font-family:'Barlow Condensed'; font-weight:700; font-size:22px; text-transform:uppercase; letter-spacing:.04em; color:#A9C1A5;">{{ daysLabel }}</span></div><p style="margin:0; font-size:16px; color:#D7D9CF;">Next: {{ nextMeeting }}</p><div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;"><a href="{{ icsHref }}" download="hailey-city-council.ics" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:10px 16px; border-radius:6px; min-height:44px; display:inline-flex; align-items:center;">Add to calendar</a><a href="https://haileycityhall.org/boards-and-commissions/city-council/city-council-agendas/" target="_blank" rel="noopener" style="color:#A9C1A5; font-weight:600; font-size:15px; display:inline-flex; align-items:center; min-height:44px;">Agendas and the case file →</a></div></div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
+          <a href="https://c.org/b9qSJfkhwF" target="_blank" rel="noopener" style="text-decoration:none; color:#F3EFE4; background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:18px; display:flex; flex-direction:column; gap:10px;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&bgcolor=1F2E25&color=F3EFE4&qzone=1&data=https%3A%2F%2Fc.org%2Fb9qSJfkhwF" width="80" height="80" alt="" loading="lazy" style="border-radius:6px;"><span style="font-family:'Barlow Condensed'; font-weight:700; font-size:22px; text-transform:uppercase; line-height:1;">No Annexation</span><span style="font-size:14px; color:#A9B3AC;">To the Hailey and Bellevue councils and P&Z</span><span style="color:#C4501F; font-weight:600;">Change.org →</span></a>
+          <a href="https://c.org/hXGNn4R8WM" target="_blank" rel="noopener" style="text-decoration:none; color:#F3EFE4; background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:18px; display:flex; flex-direction:column; gap:10px;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&bgcolor=1F2E25&color=F3EFE4&qzone=1&data=https%3A%2F%2Fc.org%2FhXGNn4R8WM" width="80" height="80" alt="" loading="lazy" style="border-radius:6px;"><span style="font-family:'Barlow Condensed'; font-weight:700; font-size:22px; text-transform:uppercase; line-height:1;">Pause for Community’s Sake</span><span style="font-size:14px; color:#A9B3AC;">Moratorium until a basin-wide water budget is done</span><span style="color:#C4501F; font-weight:600;">Change.org →</span></a>
+        </div>
       </div>
     </div>
-    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s .1s ease, transform .7s .1s ease, border-color .3s ease;">
+    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s 0s ease, transform .7s 0s ease, border-color .3s ease;">
       <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">02</span>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
         <div>
+          <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Show up</h3>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Hailey City Council meets the second and fourth Monday at 5:30 pm, Hailey City Hall, 115 S. Main St. Bellevue City Council: check the city’s agenda page for Gannett Ranch dates. Council members count the room.</p>
+        </div>
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-family:'Barlow Condensed'; font-weight:800; font-size:64px; line-height:.9;">{{ daysToMeeting }}</span><span style="font-family:'Barlow Condensed'; font-weight:700; font-size:22px; text-transform:uppercase; letter-spacing:.04em; color:#A9C1A5;">{{ daysLabel }}</span></div><p style="margin:0; font-size:16px; color:#D7D9CF;">Next: {{ nextMeeting }}</p><div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;"><a href="{{ icsHref }}" download="hailey-city-council.ics" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:10px 16px; border-radius:6px; min-height:44px; display:inline-flex; align-items:center;">Add to calendar</a><a href="https://haileycityhall.org/boards-and-commissions/city-council/city-council-agendas/" target="_blank" rel="noopener" style="color:#A9C1A5; font-weight:600; font-size:15px; display:inline-flex; align-items:center; min-height:44px;">Hailey agendas →</a><a href="https://www.bellevueidaho.us/" target="_blank" rel="noopener" style="color:#A9C1A5; font-weight:600; font-size:15px; display:inline-flex; align-items:center; min-height:44px;">Bellevue agendas →</a></div></div>
+      </div>
+    </div>
+    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s .1s ease, transform .7s .1s ease, border-color .3s ease;">
+      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">03</span>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
+        <div>
           <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Write the Express</h3>
-          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">There has been a letter against Blaine Crossing in the paper nearly every week since July. Keep it going.</p>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">There has been a letter against these annexations in the paper nearly every week since July. Keep it going.</p>
         </div>
         <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:16px; color:#D7D9CF;"><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Under 300 words</span></li><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>One point, not six</span></li><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Your name and your town</span></li><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Send them your council letter, trimmed</span></li></ul><div><a href="https://www.mtexpress.com/site/forms/" target="_blank" rel="noopener" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:10px 16px; border-radius:6px; min-height:44px; display:inline-flex; align-items:center;">Submit a letter to the editor</a></div></div>
       </div>
     </div>
     <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s .2s ease, transform .7s .2s ease, border-color .3s ease;">
-      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">03</span>
+      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">04</span>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
         <div>
           <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Stay in the loop</h3>
-          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">The formal application hasn't been filed yet. When the hearing dates land, you'll hear from us first. Nothing else.</p>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Steadfast has filed in Bellevue. Oppenheimer's formal application to Hailey is still coming. When hearing dates land, you'll hear from us first. Nothing else.</p>
         </div>
         <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><div style="display:flex; gap:8px;"><input value="{{ alertEmail }}" onChange="{{ setAlertEmail }}" placeholder="Email" type="email" style="flex:1; min-width:0; min-height:46px; padding:10px 12px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px;"><button onClick="{{ subscribe }}" style="border:0; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; text-transform:uppercase; letter-spacing:.03em; padding:0 16px; border-radius:8px; min-height:46px;">{{ subscribeLabel }}</button></div><p style="margin:0; font-size:13px; color:#A9B3AC;">One email per hearing or deadline. Unsubscribe any time.</p></div>
       </div>
@@ -354,7 +427,7 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
     </div>
     <div>
       <p style="margin:0 0 8px; font-weight:600; color:#17231C;">Sources</p>
-      <p style="margin:0; text-wrap:pretty;">Figures come from the developer's letter of intent and presentation to the Hailey City Council (July 13, 2026), Hailey and Blaine County public records, the USGS Wood River Valley groundwater model (2016), the Big Wood River Ground Water Management Area plan and 2021 settlement (IDWR), and reporting in the Idaho Mountain Express. The official record for land use applications is kept by the <a href="https://haileycityhall.org/community-development/active-land-use-applications/" target="_blank" rel="noopener">City of Hailey</a>.</p>
+      <p style="margin:0; text-wrap:pretty;">Figures come from the developer's letter of intent and presentation to the Hailey City Council (July 13, 2026), Hailey and Blaine County public records, the USGS Wood River Valley groundwater model (2016), the Big Wood River Ground Water Management Area plan and 2021 settlement (IDWR), and reporting in the Idaho Mountain Express. The official record is kept by the <a href="https://haileycityhall.org/community-development/active-land-use-applications/" target="_blank" rel="noopener">City of Hailey</a> for the Oppenheimer request and the <a href="https://www.bellevueidaho.us/" target="_blank" rel="noopener">City of Bellevue</a> for the Steadfast request. Housing figures: Perry Boyle, The Ketchum Sun.</p>
     </div>
   </div>
 </footer>
@@ -382,23 +455,34 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
   </div>
 </header>
 
-<section id="top" data-screen-label="Hero ES" style="max-width:1160px; width:100%; margin:0 auto; padding:clamp(28px, 5vw, 56px) 20px 40px; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:clamp(20px, 4vw, 36px); align-items:center;">
-  <div>
-    <p style="margin:0 0 18px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600; animation:rise .6s ease both;">Hailey, Idaho · Anexión “Blaine Crossing”</p>
-    <h1 style="margin:0 0 22px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.9; letter-spacing:-.01em; font-size:clamp(52px, 11vw, 120px); animation:rise .7s .08s ease both;">108 acres.<br><span data-count="614">614</span> viviendas.<br><span style="color:#C4501F;">Tres votos.</span></h1>
-    <p style="margin:0 0 28px; font-size:clamp(17px, 1.6vw, 20px); line-height:1.5; max-width:560px; text-wrap:pretty; animation:rise .7s .16s ease both;">Oppenheimer Development Corp. quiere que la Ciudad de Hailey anexe 108 acres del rancho Flying Hat, entre Hailey y Bellevue: 614 viviendas, 280,000 pies cuadrados de espacio industrial, comercios y un hotel de 100 habitaciones. El Concejo Municipal de Hailey decide. Tu correo queda en el registro oficial.</p>
-    <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; animation:rise .7s .24s ease both;">
-      <a href="#letter" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:22px; letter-spacing:.03em; text-transform:uppercase; padding:14px 24px; border-radius:6px; animation:pulse 2.4s 1.2s ease-out 3;">Escribe al concejo · 2 minutos</a>
-      <a href="#stakes" style="text-decoration:none; color:#17231C; font-family:'Barlow Condensed'; font-weight:700; font-size:22px; letter-spacing:.03em; text-transform:uppercase; padding:14px 18px; border:1.5px solid #17231C; border-radius:6px;">Qué está en juego</a>
+<section id="top" data-screen-label="Hero ES" style="max-width:1160px; width:100%; margin:0 auto; padding:clamp(24px, 4vw, 48px) 20px 40px;">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:clamp(20px, 4vw, 40px); align-items:start;">
+    <div style="animation:rise .8s .1s ease both; position:sticky; top:72px;">
+      <div style="aspect-ratio:4/3; max-height:min(640px, 72vh);">
+        <image-slot id="big-map" shape="rounded" radius="14" fit="contain" placeholder="Mapa del panorama completo (Map 10_5.png)"></image-slot>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:14px 20px; margin-top:12px; font-size:13px; color:#3D4842;">
+        <span style="display:inline-flex; align-items:center; gap:7px;"><span style="width:12px; height:12px; border-radius:3px; background:#17231C; display:inline-block;"></span>Aprobado, en desarrollo</span>
+        <span style="display:inline-flex; align-items:center; gap:7px;"><span style="width:12px; height:12px; border-radius:3px; background:#2E7D4F; display:inline-block;"></span>Solicitudes activas</span>
+        <span style="display:inline-flex; align-items:center; gap:7px;"><span style="width:12px; height:12px; border-radius:3px; background:#9CCB8E; display:inline-block;"></span>Anexión o acuerdo de desarrollo previsto</span>
+      </div>
     </div>
-    <sc-if value="{{ showCount }}" hint-placeholder-val="{{ false }}">
-      <p style="margin:20px 0 0; font-size:15px; color:#4F6B4E; font-weight:600;">{{ countText }}</p>
-    </sc-if>
-  </div>
-  <div style="position:relative; aspect-ratio:4/5; max-height:min(620px, 70vh); animation:rise .8s .2s ease both;">
-    <image-slot id="hero-creek" shape="rounded" radius="14" placeholder="Foto: Silver Creek o el rancho Flying Hat" src="https://bloximages.chicago2.vip.townnews.com/mtexpress.com/content/tncms/assets/v3/editorial/0/9a/09a891e9-b18e-4587-bd28-a25fe1ee541b/6643bda1233d5.image.jpg?resize=1000%2C1250&order=resize" credit="Foto: Idaho Mountain Express (provisional, permiso pendiente)" credit-href="https://www.mtexpress.com/news/hailey/water-concerns-raised-ahead-of-blaine-crossing-open-house/article_7960f431-1cd5-4e8c-a690-011025b87850.html"></image-slot>
-    <div style="position:absolute; left:14px; bottom:14px; right:14px; display:flex; justify-content:flex-end; pointer-events:none;">
-      <span style="background:rgba(23,35,28,.82); color:#F3EFE4; font-size:13px; padding:6px 10px; border-radius:4px;">Rancho Flying Hat, al este de la carretera 75</span>
+    <div>
+      <p style="margin:0 0 16px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600; animation:rise .6s ease both;">Wood River Valley · Condado de Blaine, Idaho</p>
+      <h1 style="margin:0 0 20px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.9; letter-spacing:-.01em; font-size:clamp(48px, 7.5vw, 92px); animation:rise .7s .08s ease both;">1,066 viviendas.<br>Dos concejos.<br><span style="color:#C4501F;">Tú decides.</span></h1>
+      <p style="margin:0 0 22px; font-size:clamp(17px, 1.5vw, 19px); line-height:1.5; max-width:560px; text-wrap:pretty; animation:rise .7s .16s ease both;">Hailey evalúa 614 viviendas en el rancho Flying Hat. Bellevue evalúa 452 más en Gannett Ranch. Súmale lo ya aprobado y trazado en todo el valle y son 4,975 casas nuevas, unas 11,940 personas más, en un condado de 25,000. Nadie ha demostrado que tengamos el agua.</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:0 0 24px; animation:rise .7s .2s ease both;">
+        <a href="#projects" style="text-decoration:none; color:inherit; border-top:3px solid #C4501F; padding-top:10px;"><span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(44px, 6vw, 68px); line-height:.9; display:block;"><span data-count="614">614</span></span><span style="font-size:14px; color:#3D4842; display:block; margin-top:6px; line-height:1.35;">Blaine Crossing · Oppenheimer · Ciudad de Hailey</span></a>
+        <a href="#projects" style="text-decoration:none; color:inherit; border-top:3px solid #2F6E87; padding-top:10px;"><span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(44px, 6vw, 68px); line-height:.9; display:block;"><span data-count="452">452</span></span><span style="font-size:14px; color:#3D4842; display:block; margin-top:6px; line-height:1.35;">Gannett Ranch · Steadfast · Ciudad de Bellevue</span></a>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; animation:rise .7s .26s ease both;">
+        <a href="#petitions"  style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(18px, 2vw, 22px); letter-spacing:.03em; text-transform:uppercase; padding:14px 20px; border-radius:6px; min-height:52px; display:inline-flex; align-items:center; justify-content:center; flex:1 1 180px; text-align:center;">Firma las peticiones</a>
+        <a href="#letter"  style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(18px, 2vw, 22px); letter-spacing:.03em; text-transform:uppercase; padding:14px 20px; border-radius:6px; min-height:52px; display:inline-flex; align-items:center; justify-content:center; flex:1 1 180px; text-align:center;">Escribe a los concejos</a>
+        <a href="https://www.mtexpress.com/site/forms/" target="_blank" rel="noopener" style="text-decoration:none; background:transparent; color:#17231C; border:1.5px solid #17231C; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(18px, 2vw, 22px); letter-spacing:.03em; text-transform:uppercase; padding:14px 20px; border-radius:6px; min-height:52px; display:inline-flex; align-items:center; justify-content:center; flex:1 1 180px; text-align:center;">Escribe al Express</a>
+      </div>
+      <sc-if value="{{ showCount }}" hint-placeholder-val="{{ false }}">
+        <p style="margin:18px 0 0; font-size:15px; color:#4F6B4E; font-weight:600;">{{ countText }}</p>
+      </sc-if>
     </div>
   </div>
 </section>
@@ -407,8 +491,8 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
   <div style="max-width:1160px; margin:0 auto;">
     <div style="max-width:720px; margin-bottom:36px;">
       <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#A9C1A5; font-weight:600;">Dos minutos. Todas las direcciones que importan.</p>
-      <h2 style="margin:0 0 14px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Dile al Concejo de Hailey: voten no.</h2>
-      <p style="margin:0; font-size:18px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Elige lo que te preocupa, pon tu nombre y armamos una carta con tus palabras. Llega a la alcaldesa, a los cuatro concejales, al departamento de planificación que lleva el registro oficial y al condado. Las cartas idénticas pesan poco. La tuya no será idéntica.</p>
+      <h2 style="margin:0 0 14px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Dile a Hailey y a Bellevue: voten no.</h2>
+      <p style="margin:0; font-size:18px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Elige lo que te preocupa, pon tu nombre y armamos una carta con tus palabras. Elige el proyecto, o los dos, y llega a la alcaldía, el concejo, el registro de planificación y el condado correctos. Las cartas idénticas pesan poco. La tuya no será idéntica.</p>
     </div>
 
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:28px; align-items:start;">
@@ -416,6 +500,19 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
         <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
           <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;">
             <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">1</span>
+            <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">¿Qué proyecto?</h3>
+          </div>
+          <p style="margin:0 0 16px; color:#A9B3AC; font-size:15px;">Elige uno o los dos. Los destinatarios se ajustan.</p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:10px;">
+            <sc-for list="{{ projectsEs }}" as="p" hint-placeholder-count="2">
+              <button onClick="{{ p.toggle }}" style="border:1.5px solid; border-radius:10px; padding:12px 14px; text-align:left; min-height:60px; transition:all .18s ease; background:{{ p.bg }}; color:{{ p.fg }}; border-color:{{ p.bc }};"><span style="display:block; font-family:'Barlow Condensed'; font-weight:700; font-size:20px; text-transform:uppercase; letter-spacing:.02em;">{{ p.label }}</span><span style="display:block; font-size:13px; opacity:.85; margin-top:2px;">{{ p.detail }}</span></button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;">
+            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">2</span>
             <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">¿Qué te importa?</h3>
           </div>
           <p style="margin:0 0 16px; color:#A9B3AC; font-size:15px;">Elige hasta tres. Cada uno agrega un párrafo.</p>
@@ -428,7 +525,7 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
 
         <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
           <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:16px;">
-            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">2</span>
+            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">3</span>
             <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">Sobre ti</h3>
           </div>
           <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
@@ -447,7 +544,7 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
             <option value="Lincoln County">Condado de Lincoln (río abajo)</option>
             <option value="the Wood River Valley">Otro lugar del valle</option>
           </select>
-          <textarea value="{{ personal }}" onChange="{{ setPersonal }}" rows="2" placeholder="Opcional: una línea con tus palabras. Cuánto tiempo llevas aquí, en qué trabajas, qué perderías." style="margin-top:12px; width:100%; padding:12px 14px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px; resize:vertical; line-height:1.45;"></textarea>
+          <textarea value="{{ personal }}" onChange="{{ setPersonal }}" rows="2" placeholder="Opcional: una línea con tus palabras. En qué trabajas aquí, qué perderías." style="margin-top:12px; width:100%; padding:12px 14px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px; resize:vertical; line-height:1.45;"></textarea>
           <label style="display:flex; gap:10px; align-items:center; margin-top:14px; font-size:15px; color:#D7D9CF; cursor:pointer;">
             <input type="checkbox" checked="{{ alerts }}" onChange="{{ toggleAlerts }}" style="width:20px; height:20px; accent-color:#C4501F;">
             Avísenme cuando haya una audiencia o una fecha límite
@@ -456,10 +553,10 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
 
         <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:22px;">
           <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:6px;">
-            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">3</span>
+            <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:30px; color:#C4501F;">4</span>
             <h3 style="margin:0; font-family:'Barlow Condensed'; font-weight:700; font-size:26px; text-transform:uppercase; letter-spacing:.02em;">Quién la recibe</h3>
           </div>
-          <p style="margin:0 0 14px; color:#A9B3AC; font-size:15px;">La Comisión de Planificación y Zonificación de Hailey lee los comentarios a través del registro del departamento de planificación.</p>
+          <p style="margin:0 0 14px; color:#A9B3AC; font-size:15px;">Según los proyectos que elegiste. Desmarca a quien quieras. Los departamentos de planificación llevan el registro oficial que usan los concejos y las comisiones.</p>
           <div style="display:flex; flex-direction:column; gap:10px;">
             <sc-for list="{{ recipientsEs }}" as="r" hint-placeholder-count="4">
               <label style="display:flex; gap:12px; align-items:flex-start; padding:12px 14px; border:1px solid #2F4436; border-radius:8px; cursor:pointer; min-height:44px;">
@@ -534,14 +631,14 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
       <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Los campos de riego como este son la segunda fuente de agua que vuelve al acuífero. Si lo pavimentas y cambias sus derechos a uso urbano todo el año, pierdes la recarga y sumas doce meses de bombeo. La cuenca no lo aguanta: en 2021 el estado cortó el agua a 140 regantes en 23,000 acres del Triángulo de Bellevue, rancheros del condado de Lincoln vendieron sus animales y Silver Creek cerró a la pesca por primera vez en su historia.</p>
     </div>
     <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .08s ease, transform .6s .08s ease;">
-      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#C4501F;"><span data-count="1400">1,400</span> autos</p>
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#C4501F;"><span data-count="2132">2,132</span> autos</p>
       <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Tráfico</h3>
-      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Solo la fase norte significa unas 1,840 personas más y 1,400 vehículos más en la carretera 75, de dos carriles, en la entrada sur de Hailey.</p>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Las dos anexiones juntas significan unas 2,800 personas más y 2,132 vehículos más en la carretera 75, de dos carriles, que además es la Main Street de Bellevue.</p>
     </div>
     <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .16s ease, transform .6s .16s ease;">
-      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#4F6B4E;">21 → <span data-count="614">614</span></p>
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#4F6B4E;">60 → <span data-count="1066">1,066</span></p>
       <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Tierra agrícola</h3>
-      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Hoy es tierra de cultivo. Con la zonificación actual del condado cabrían como máximo 21 casas. La anexión convierte 21 en 614, más un hotel y 280,000 pies cuadrados industriales. Cuando las ciudades toman más agua, los agricultores dejan más campos sin sembrar.</p>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Los dos sitios son tierra de cultivo. Con la zonificación actual del condado cabrían unas 60 casas entre ambos: 21 en Flying Hat, 39 en Gannett Ranch. La anexión convierte 60 en 1,066, más un hotel, bodegas y más de 400,000 pies cuadrados industriales. Cuando las ciudades toman más agua, los agricultores dejan más campos sin sembrar.</p>
     </div>
     <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .24s ease, transform .6s .24s ease;">
       <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#4F6B4E;">Dos pueblos</p>
@@ -549,26 +646,42 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
       <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">El terreno abierto entre Hailey y Bellevue es hábitat de fauna, cortafuegos, un lugar donde el agua vuelve al acuífero, y la razón por la que los dos pueblos siguen siendo dos pueblos. Los votantes del condado de Blaine ya pagan un impuesto para proteger terrenos como este: el gravamen de Tierra, Agua y Vida Silvestre ha ayudado a comprar servidumbres de conservación en el Triángulo de Bellevue. Es el único programa de este tipo en un condado de Idaho.</p>
     </div>
     <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .32s ease, transform .6s .32s ease;">
-      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#C4501F;">3.5 millas</p>
-      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">El centro</h3>
-      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Un segundo centro comercial a 3.5 millas de Main Street compite con los negocios que Hailey ya tiene y se lleva gente y dinero del centro.</p>
+      <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#C4501F;">Dos centros nuevos</p>
+      <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Los centros</h3>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Blaine Crossing pone un centro comercial a 3.5 millas del centro de Hailey y a 1.5 del de Bellevue. Gannett Ranch pone un mercado, comercios y un centro cívico a 1.5 millas al sur de la Main Street de Bellevue. Ambos compiten con los negocios que los pueblos ya tienen.</p>
     </div>
     <div data-reveal style-hover="background:#FFFFFF" style="background:#F3EFE4; padding:28px 24px; opacity:0; transform:translateY(16px); transition:opacity .6s .4s ease, transform .6s .4s ease;">
       <p style="margin:0 0 6px; font-family:'Barlow Condensed'; font-weight:800; font-size:52px; line-height:1; color:#2F6E87;">¿Quién paga?</p>
       <h3 style="margin:0 0 10px; font-size:20px; font-weight:600;">Servicios</h3>
-      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Hoy no hay infraestructura municipal en ese terreno. Calles, alcantarillado, agua, policía, bomberos, escuelas, senderos: el costo para los residentes actuales no se conoce, y dura mucho después de que el desarrollador se haya ido.</p>
+      <p style="margin:0; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Hoy no hay infraestructura municipal en ninguno de los dos sitios. Gannett Ranch tendría que conectarse al agua, alcantarillado y calles de Bellevue, y la ciudad debe demostrar que puede dar ese servicio. Calles, policía, bomberos, escuelas, senderos: el costo para los residentes actuales no se conoce, y dura mucho después de que los desarrolladores se hayan ido.</p>
     </div>
   </div>
 </section>
 
-<section data-screen-label="Map ES" style="max-width:1160px; width:100%; margin:0 auto; padding:24px 20px 72px; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px; align-items:center;">
-  <div style="aspect-ratio:16/11;">
-    <image-slot id="site-map" shape="rounded" radius="12" fit="contain" placeholder="Mapa del sitio o foto aérea del rancho" src="https://bloximages.chicago2.vip.townnews.com/mtexpress.com/content/tncms/assets/v3/editorial/e/6b/e6b88d48-5c73-4aba-bdfd-79d00ecefe08/6a48361469082.image.png?resize=1200%2C900&order=resize" credit="Plan del desarrollador, documentos públicos de Hailey" credit-href="https://haileycityhall.org/community-development/active-land-use-applications/"></image-slot>
+<section id="projects" data-screen-label="Projects ES" style="max-width:1160px; width:100%; margin:0 auto; padding:24px 20px 72px;">
+  <div style="max-width:720px; margin-bottom:32px;">
+    <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#4F6B4E; font-weight:600;">Dos solicitudes, dos concejos</p>
+    <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Qué está sobre la mesa.</h2>
   </div>
-  <div>
-    <h2 style="margin:0 0 14px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(34px, 4.5vw, 56px);">Esto es la fase uno.</h2>
-    <p style="margin:0 0 14px; font-size:17px; line-height:1.55; text-wrap:pretty;">Los 108 acres que hoy tiene Hailey enfrente son la parte norte. El propio mapa del desarrollador muestra otros 119 acres al sur para anexar a Bellevue más adelante. Juntos, son un pueblo nuevo en la entrada del valle.</p>
-    <p style="margin:0; font-size:17px; line-height:1.55; text-wrap:pretty;">Si Hailey dice no, el terreno sigue bajo la zonificación del condado de Blaine: un máximo de 21 casas.</p>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px;">
+    <div data-reveal style="background:#fff; border:1px solid #D9D2C1; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;">
+      <div style="aspect-ratio:16/11; background:#E9E3D3;"><image-slot id="plan-blaine" shape="rect" fit="contain" placeholder="Plano de sitio de Oppenheimer (site plan July 2026.pdf)"></image-slot></div>
+      <div style="padding:22px 24px 26px; border-top:3px solid #C4501F;">
+        <p style="margin:0 0 4px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">Oppenheimer Development Corp. · Ciudad de Hailey</p>
+        <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:800; font-size:34px; text-transform:uppercase; line-height:1;">Blaine Crossing</h3>
+        <p style="margin:0 0 12px; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Anexar 108 acres del rancho Flying Hat entre Hailey y Bellevue: 614 viviendas, 280,000 pies cuadrados industriales, comercios y servicios, instalaciones recreativas y un hotel de 100 habitaciones. Oppenheimer piensa pedir después la anexión de los 120 acres restantes a Bellevue.</p>
+        <p style="margin:0; font-size:15px; font-weight:600; color:#C4501F;">Si Hailey dice no: la zonificación del condado permite 21 casas.</p>
+      </div>
+    </div>
+    <div data-reveal style="background:#fff; border:1px solid #D9D2C1; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s .1s ease, transform .6s .1s ease;">
+      <div style="aspect-ratio:16/11; background:#E9E3D3;"><image-slot id="plan-gannett" shape="rect" fit="contain" placeholder="Plano de sitio de Steadfast, página fase 3 (Site plan.pdf)"></image-slot></div>
+      <div style="padding:22px 24px 26px; border-top:3px solid #2F6E87;">
+        <p style="margin:0 0 4px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">Steadfast Company · Ciudad de Bellevue</p>
+        <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:800; font-size:34px; text-transform:uppercase; line-height:1;">Gannett Ranch</h3>
+        <p style="margin:0 0 12px; font-size:16px; line-height:1.5; color:#3D4842; text-wrap:pretty;">Anexar 191 acres de tierra agrícola productiva al sur de Bellevue: 452 viviendas, centro cívico, anfiteatro, mercado, comercios, industria ligera, bodegas y 150,000 pies cuadrados de industria flexible. Se conectaría al agua, alcantarillado y calles de Bellevue. La ciudad debe verificar que puede dar ese servicio. Presentada a fines de agosto de 2026.</p>
+        <p style="margin:0; font-size:15px; font-weight:600; color:#2F6E87;">Si Bellevue dice no: la zonificación del condado permite unas 39 casas.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -585,7 +698,7 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
       </div>
       <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); background:#F3EFE4; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s .08s ease, transform .6s .08s ease;">
         <div style="padding:24px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">El desarrollador dice</p><p style="margin:0; font-size:19px; line-height:1.4; font-style:italic;">“Esta es la vivienda que su comunidad necesita.”</p></div>
-        <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">El registro</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">Unas 900 unidades ya están aprobadas en el condado y sus ciudades. Otros 1,940 lotes ya trazados siguen vacíos. Ninguna de las 614 unidades propuestas aquí tiene restricciones de precio ligadas a los salarios locales.</p></div>
+        <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">El registro</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">Unas 1,330 unidades ya están aprobadas en el condado y sus ciudades. Otros 1,940 lotes ya trazados siguen vacíos. Ninguna de las 1,066 unidades propuestas en estas dos anexiones tiene restricciones de precio ligadas a los salarios locales.</p></div>
       </div>
       <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); background:#F3EFE4; border-radius:12px; overflow:hidden; opacity:0; transform:translateY(16px); transition:opacity .6s .16s ease, transform .6s .16s ease;">
         <div style="padding:24px;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8A938D; font-weight:600;">El desarrollador dice</p><p style="margin:0; font-size:19px; line-height:1.4; font-style:italic;">“Los campos donados serán espacio abierto entre los pueblos.”</p></div>
@@ -597,6 +710,22 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
         <div style="padding:24px; background:#fff;"><p style="margin:0 0 6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C4501F; font-weight:600;">El registro</p><p style="margin:0; font-size:16px; line-height:1.5; text-wrap:pretty;">Son derechos de riego. Bajo el acuerdo de 2021, los regantes del Triángulo bombean solo del 1 de mayo al 15 de septiembre, y el agua de los campos en descanso debe volver al acuífero como recarga. Una ciudad usa agua doce meses al año y un estacionamiento no recarga nada. Cambiar esos derechos requiere aprobación del estado, y el volumen en papel no es la pregunta. Cuándo y dónde sale el agua, sí.</p></div>
       </div>
     </div>
+    <details data-screen-label="Housing ES" style="margin-top:28px; background:#F3EFE4; border-radius:12px; overflow:hidden;">
+      <summary style="list-style:none; cursor:pointer; padding:22px 24px; display:flex; justify-content:space-between; align-items:center; gap:16px; min-height:44px;">
+        <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(26px, 3.5vw, 36px); text-transform:uppercase; line-height:1;">Vivienda asequible, desmentida</span>
+        <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:32px; color:#C4501F; line-height:1;">+</span>
+      </summary>
+      <div style="padding:0 24px 26px; display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
+        <div style="font-size:16px; line-height:1.55; color:#3D4842; display:flex; flex-direction:column; gap:12px;"><p style="margin:0;">Todos conocemos el problema de la vivienda. La brecha entre lo que la gente gana y lo que cuesta construir es tan grande que no podemos construir hasta salir de ella. Más unidades a precio de mercado lo empeoran: más población necesita más trabajadores, que necesitan más vivienda.</p><p style="margin:0;">El ingreso familiar mediano del condado de Blaine es de unos $92,000 para un hogar de 2.4 personas. A las tasas actuales, un condominio de dos recámaras asequible para esa familia no puede costar más de unos $327,000. Construir uno en Hailey cuesta al menos $650,000. No hay condominios a precio de mercado en venta al número asequible, y no se puede construir ninguno a ese precio.</p><p style="margin:0; font-weight:600; color:#17231C;">Entonces, ¿por qué un concejal votaría por anexar 614 o 452 unidades más a precio de mercado?</p></div>
+        <div style="background:#fff; border-radius:10px; padding:22px; font-family:'Barlow Condensed'; text-transform:uppercase;">
+          <p style="margin:0 0 4px; font-size:14px; font-weight:700; letter-spacing:.06em; color:#8A938D;">Costo de construir un condominio de 2 rec. en Hailey</p>
+          <p style="margin:0 0 16px; font-size:clamp(44px, 6vw, 64px); font-weight:800; line-height:1; color:#C4501F;">$650k</p>
+          <p style="margin:0 0 4px; font-size:14px; font-weight:700; letter-spacing:.06em; color:#8A938D;">Lo que puede pagar la familia mediana</p>
+          <p style="margin:0; font-size:clamp(44px, 6vw, 64px); font-weight:800; line-height:1; color:#4F6B4E;">$327k</p>
+          <p style="margin:16px 0 0; font-family:'Source Serif 4', Georgia, serif; text-transform:none; font-size:13px; color:#5B6660;">Fuente: Perry Boyle, The Ketchum Sun. Calculadora de asequibilidad de Fannie Mae a las tasas actuales; costos totales de construcción en Hailey.</p>
+        </div>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -604,17 +733,17 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
   <div style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center;">
     <div>
       <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#A9C1A5; font-weight:600;">El panorama completo</p>
-      <h2 style="margin:0 0 18px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Blaine Crossing no es el único.</h2>
-      <p style="margin:0 0 14px; font-size:17px; line-height:1.55; color:#D7D9CF; text-wrap:pretty;">Suma lo ya aprobado, lo trazado y en espera, y lo que viene por anexiones y acuerdos de desarrollo en todo el valle, y son unas 4,400 casas más. A 2.3 personas por casa, son unas 10,000 personas más en un condado de 25,000.</p>
+      <h2 style="margin:0 0 18px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Estos dos no son los únicos.</h2>
+      <p style="margin:0 0 14px; font-size:17px; line-height:1.55; color:#D7D9CF; text-wrap:pretty;">Suma lo ya aprobado, lo trazado y en espera, y lo que viene por anexiones y acuerdos de desarrollo en todo el valle, y son 4,975 casas más. A 2.4 personas por casa, son unas 11,940 personas más y unos 10,000 autos más, en un condado de 25,000. Eso sin contar la segunda fase de Oppenheimer ni nada en Peregrine Ranch.</p>
       <p style="margin:0 0 24px; font-size:17px; line-height:1.55; color:#D7D9CF; text-wrap:pretty;">Nadie ha respondido tres preguntas: ¿Tenemos el agua? ¿Quién paga? ¿Quién se beneficia?</p>
       <a href="#letter" style="text-decoration:none; display:inline-block; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:20px; letter-spacing:.03em; text-transform:uppercase; padding:13px 22px; border-radius:6px;">Pregúntales tú</a>
     </div>
     <div style="display:grid; gap:2px; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase;">
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Aprobadas o en construcción</span><span data-count="900" style="font-size:44px; line-height:1;">900</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Aprobadas o en construcción</span><span data-count="1330" style="font-size:44px; line-height:1;">1,330</span></div>
       <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Lotes trazados, aún vacíos</span><span data-count="1940" style="font-size:44px; line-height:1;">1,940</span></div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Anexiones y acuerdos de desarrollo</span><span data-count="1583" style="font-size:44px; line-height:1;">1,583</span></div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:20px 0 6px;"><span style="font-size:20px; font-weight:700; color:#F3EFE4; letter-spacing:.04em;">Casas más</span><span data-count="4423" style="font-size:72px; line-height:1; color:#C4501F;">4,423</span></div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:6px 0;"><span style="font-size:20px; font-weight:700; color:#F3EFE4; letter-spacing:.04em;">Personas más</span><span style="font-size:44px; line-height:1; color:#A9C1A5;">≈ <span data-count="10172">10,172</span></span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:16px 0; border-bottom:1px solid #2F4436;"><span style="font-size:18px; font-weight:700; color:#A9B3AC; letter-spacing:.04em;">Anexiones y acuerdos de desarrollo</span><span data-count="1705" style="font-size:44px; line-height:1;">1,705</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:20px 0 6px;"><span style="font-size:20px; font-weight:700; color:#F3EFE4; letter-spacing:.04em;">Casas más</span><span data-count="4975" style="font-size:72px; line-height:1; color:#C4501F;">4,975</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:6px 0;"><span style="font-size:20px; font-weight:700; color:#F3EFE4; letter-spacing:.04em;">Personas más</span><span style="font-size:44px; line-height:1; color:#A9C1A5;">≈ <span data-count="11940">11,940</span></span></div>
     </div>
   </div>
 </section>
@@ -632,41 +761,58 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
     <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“Ya basta. Nos han saturado el desarrollo acelerado, la congestión, la construcción y los embotellamientos. ¿Quién se beneficia? Es hora de que la comunidad cuide a la comunidad. Nuestros líderes deben rendir cuentas ante nosotros, no ante los desarrolladores.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Nacida en el valle, dueña de un negocio</footer></blockquote>
     <blockquote style="flex:0 0 min(360px, 82vw); scroll-snap-align:start; margin:0; background:#fff; border:1px solid #D9D2C1; border-radius:12px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; gap:16px;"><p style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;">“Me encantaba el ambiente rural y de pueblo chico del valle, pero con el crecimiento reciente ya no lo reconozco.”</p><footer style="font-size:14px; color:#5B6660; font-weight:600;">Visitante</footer></blockquote>
   </div>
+  <div style="max-width:1160px; margin:0 auto; padding:24px 20px 0; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+    <a href="./public-comment-hailey.pdf" target="_blank" rel="noopener" style="text-decoration:none; background:#17231C; color:#F3EFE4; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:12px 18px; border-radius:6px; min-height:48px; display:inline-flex; align-items:center;">Lee el registro: comentarios públicos de Hailey (PDF)</a>
+    <span style="font-size:14px; color:#5B6660;">Todos los comentarios enviados a Hailey hasta ahora. La ciudad los esconde. Nosotros no.</span>
+  </div>
 </section>
 
 <section id="act" data-screen-label="Other actions ES" style="background:#17231C; color:#F3EFE4; padding:80px 20px 96px;">
   <div style="max-width:1160px; margin:0 auto;">
     <div style="max-width:760px; margin-bottom:28px;">
       <p style="margin:0 0 12px; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#A9C1A5; font-weight:600;">Después de enviar tu carta</p>
-      <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Tres cosas más que mueven votos.</h2>
+      <h2 style="margin:0; font-family:'Barlow Condensed'; font-weight:800; text-transform:uppercase; line-height:.95; font-size:clamp(40px, 6vw, 72px);">Cuatro cosas que mueven votos.</h2>
     </div>
     <div style="display:flex; flex-direction:column; border-bottom:1px solid #2F4436;">
-    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s 0s ease, transform .7s 0s ease, border-color .3s ease;">
+    <div id="petitions" data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease, border-color .3s ease;">
       <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">01</span>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
         <div>
-          <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Ve en persona</h3>
-          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">El Concejo de Hailey se reúne el segundo y cuarto lunes a las 5:30 pm en el Ayuntamiento, 115 S. Main St. Los concejales cuentan cuánta gente hay en la sala.</p>
+          <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Firma las dos peticiones</h3>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Treinta segundos cada una. Una dice no a estas anexiones. La otra pide a todos los funcionarios electos del valle una pausa: frenar subdivisiones y anexiones hasta que exista un balance de agua real y una cuenta honesta de lo que cuesta el crecimiento. Escanea o toca.</p>
         </div>
-        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-family:'Barlow Condensed'; font-weight:800; font-size:64px; line-height:.9;">{{ daysToMeeting }}</span><span style="font-family:'Barlow Condensed'; font-weight:700; font-size:22px; text-transform:uppercase; letter-spacing:.04em; color:#A9C1A5;">{{ daysLabel }}</span></div><p style="margin:0; font-size:16px; color:#D7D9CF;">Próxima: {{ nextMeeting }}</p><div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;"><a href="{{ icsHref }}" download="concejo-hailey.ics" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:10px 16px; border-radius:6px; min-height:44px; display:inline-flex; align-items:center;">Agregar al calendario</a><a href="https://haileycityhall.org/boards-and-commissions/city-council/city-council-agendas/" target="_blank" rel="noopener" style="color:#A9C1A5; font-weight:600; font-size:15px; display:inline-flex; align-items:center; min-height:44px;">Agendas y expediente →</a></div></div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
+          <a href="https://c.org/b9qSJfkhwF" target="_blank" rel="noopener" style="text-decoration:none; color:#F3EFE4; background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:18px; display:flex; flex-direction:column; gap:10px;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&bgcolor=1F2E25&color=F3EFE4&qzone=1&data=https%3A%2F%2Fc.org%2Fb9qSJfkhwF" width="80" height="80" alt="" loading="lazy" style="border-radius:6px;"><span style="font-family:'Barlow Condensed'; font-weight:700; font-size:22px; text-transform:uppercase; line-height:1;">No a la anexión</span><span style="font-size:14px; color:#A9B3AC;">A los concejos y comisiones de Hailey y Bellevue</span><span style="color:#C4501F; font-weight:600;">Change.org →</span></a>
+          <a href="https://c.org/hXGNn4R8WM" target="_blank" rel="noopener" style="text-decoration:none; color:#F3EFE4; background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:18px; display:flex; flex-direction:column; gap:10px;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&bgcolor=1F2E25&color=F3EFE4&qzone=1&data=https%3A%2F%2Fc.org%2FhXGNn4R8WM" width="80" height="80" alt="" loading="lazy" style="border-radius:6px;"><span style="font-family:'Barlow Condensed'; font-weight:700; font-size:22px; text-transform:uppercase; line-height:1;">Pausa por la comunidad</span><span style="font-size:14px; color:#A9B3AC;">Moratoria hasta terminar un balance de agua de toda la cuenca</span><span style="color:#C4501F; font-weight:600;">Change.org →</span></a>
+        </div>
       </div>
     </div>
-    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s .1s ease, transform .7s .1s ease, border-color .3s ease;">
+    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s 0s ease, transform .7s 0s ease, border-color .3s ease;">
       <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">02</span>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
         <div>
+          <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Ve en persona</h3>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">El Concejo de Hailey se reúne el segundo y cuarto lunes a las 5:30 pm en el Ayuntamiento, 115 S. Main St. Concejo de Bellevue: revisa la página de agendas de la ciudad para las fechas de Gannett Ranch. Los concejales cuentan cuánta gente hay en la sala.</p>
+        </div>
+        <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-family:'Barlow Condensed'; font-weight:800; font-size:64px; line-height:.9;">{{ daysToMeeting }}</span><span style="font-family:'Barlow Condensed'; font-weight:700; font-size:22px; text-transform:uppercase; letter-spacing:.04em; color:#A9C1A5;">{{ daysLabel }}</span></div><p style="margin:0; font-size:16px; color:#D7D9CF;">Próxima: {{ nextMeeting }}</p><div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;"><a href="{{ icsHref }}" download="concejo-hailey.ics" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:10px 16px; border-radius:6px; min-height:44px; display:inline-flex; align-items:center;">Agregar al calendario</a><a href="https://haileycityhall.org/boards-and-commissions/city-council/city-council-agendas/" target="_blank" rel="noopener" style="color:#A9C1A5; font-weight:600; font-size:15px; display:inline-flex; align-items:center; min-height:44px;">Agendas de Hailey →</a><a href="https://www.bellevueidaho.us/" target="_blank" rel="noopener" style="color:#A9C1A5; font-weight:600; font-size:15px; display:inline-flex; align-items:center; min-height:44px;">Agendas de Bellevue →</a></div></div>
+      </div>
+    </div>
+    <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s .1s ease, transform .7s .1s ease, border-color .3s ease;">
+      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">03</span>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
+        <div>
           <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Escribe al Express</h3>
-          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Desde julio ha salido una carta contra Blaine Crossing en el periódico casi cada semana. Que siga.</p>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Desde julio ha salido una carta contra estas anexiones en el periódico casi cada semana. Que siga.</p>
         </div>
         <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:16px; color:#D7D9CF;"><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Menos de 300 palabras</span></li><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Una sola idea</span></li><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Tu nombre y tu pueblo</span></li><li style="display:flex; gap:10px; align-items:baseline;"><span style="color:#C4501F; font-weight:700;">✓</span><span>Manda tu carta al concejo, recortada</span></li></ul><div><a href="https://www.mtexpress.com/site/forms/" target="_blank" rel="noopener" style="text-decoration:none; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; letter-spacing:.03em; text-transform:uppercase; padding:10px 16px; border-radius:6px; min-height:44px; display:inline-flex; align-items:center;">Enviar carta al editor</a></div></div>
       </div>
     </div>
     <div data-reveal style-hover="border-top-color:#C4501F" style="display:grid; grid-template-columns:minmax(56px, 150px) minmax(0, 1fr); gap:16px clamp(14px, 3vw, 28px); padding:clamp(28px, 4vw, 40px) 0; border-top:1px solid #2F4436; opacity:0; transform:translateY(28px); transition:opacity .7s .2s ease, transform .7s .2s ease, border-color .3s ease;">
-      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">03</span>
+      <span style="font-family:'Barlow Condensed'; font-weight:800; font-size:clamp(72px, 10vw, 132px); line-height:.8; color:#C4501F; letter-spacing:-.02em;">04</span>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:start;">
         <div>
           <h3 style="margin:0 0 10px; font-family:'Barlow Condensed'; font-weight:700; font-size:clamp(30px, 4vw, 44px); text-transform:uppercase; letter-spacing:.02em; line-height:1;">Mantente al tanto</h3>
-          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">La solicitud formal aún no se ha presentado. Cuando haya fechas de audiencia, te avisamos primero. Nada más.</p>
+          <p style="margin:0; font-size:17px; line-height:1.5; color:#D7D9CF; text-wrap:pretty;">Steadfast ya presentó en Bellevue. La solicitud formal de Oppenheimer a Hailey aún viene. Cuando haya fechas de audiencia, te avisamos primero. Nada más.</p>
         </div>
         <div style="background:#1F2E25; border:1px solid #2F4436; border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:12px;"><div style="display:flex; gap:8px;"><input value="{{ alertEmail }}" onChange="{{ setAlertEmail }}" placeholder="Correo" type="email" style="flex:1; min-width:0; min-height:46px; padding:10px 12px; border-radius:8px; border:1px solid #3B5244; background:#17231C; color:#F3EFE4; font-size:16px;"><button onClick="{{ subscribe }}" style="border:0; background:#C4501F; color:#fff; font-family:'Barlow Condensed'; font-weight:700; font-size:18px; text-transform:uppercase; letter-spacing:.03em; padding:0 16px; border-radius:8px; min-height:46px;">{{ subscribeLabel }}</button></div><p style="margin:0; font-size:13px; color:#A9B3AC;">Un correo por audiencia o fecha límite. Puedes darte de baja cuando quieras.</p></div>
       </div>
@@ -682,7 +828,7 @@ input::placeholder, textarea::placeholder { color:#8A938D; }
     </div>
     <div>
       <p style="margin:0 0 8px; font-weight:600; color:#17231C;">Fuentes</p>
-      <p style="margin:0; text-wrap:pretty;">Las cifras vienen de la carta de intención y la presentación del desarrollador ante el Concejo de Hailey (13 de julio de 2026), registros públicos de Hailey y del condado de Blaine, el modelo de aguas subterráneas del USGS para el valle (2016), el plan del Área de Manejo de Aguas Subterráneas del Big Wood y el acuerdo de 2021 (IDWR), y la cobertura del Idaho Mountain Express. El registro oficial de solicitudes de uso de suelo lo lleva la <a href="https://haileycityhall.org/community-development/active-land-use-applications/" target="_blank" rel="noopener">Ciudad de Hailey</a>.</p>
+      <p style="margin:0; text-wrap:pretty;">Las cifras vienen de la carta de intención y la presentación del desarrollador ante el Concejo de Hailey (13 de julio de 2026), registros públicos de Hailey y del condado de Blaine, el modelo de aguas subterráneas del USGS para el valle (2016), el plan del Área de Manejo de Aguas Subterráneas del Big Wood y el acuerdo de 2021 (IDWR), y la cobertura del Idaho Mountain Express. El registro oficial lo lleva la <a href="https://haileycityhall.org/community-development/active-land-use-applications/" target="_blank" rel="noopener">Ciudad de Hailey</a> para la solicitud de Oppenheimer y la <a href="https://www.bellevueidaho.us/" target="_blank" rel="noopener">Ciudad de Bellevue</a> para la de Steadfast. Cifras de vivienda: Perry Boyle, The Ketchum Sun.</p>
     </div>
   </div>
 </footer>
@@ -697,8 +843,10 @@ class Component extends DCLogic {
     hailey: ['martha.burke@haileycityhall.org','kaz.thea@haileycityhall.org','sage.sauerbrey@haileycityhall.org','dustin.stone@haileycityhall.org','juan.martinez@haileycityhall.org'],
     record: ['planning@haileycityhall.org'],
     county: ['pzcounter@co.blaine.id.us'],
-    bellevue: ['cgiordani@bellevueidaho.us','dshay@bellevueidaho.us','tbergin@bellevueidaho.us','tdavis@bellevueidaho.us','swrede@bellevueidaho.us','aard@bellevueidaho.us','gbeiser@bellevueidaho.us']
+    bellevue: ['cgiordani@bellevueidaho.us','dshay@bellevueidaho.us','swrede@bellevueidaho.us','gbeiser@bellevueidaho.us','tdavis@bellevueidaho.us','tbergin@bellevueidaho.us','aard@bellevueidaho.us','bparker@bellevueidaho.us']
   };
+  static PROJ_RCPT = { blaine: ['hailey','record','county'], gannett: ['bellevue','county'] };
+  static derivedRcpt(p) { const on = {}; for (const k of ['hailey','record','county','bellevue']) on[k] = (p.blaine && Component.PROJ_RCPT.blaine.includes(k)) || (p.gannett && Component.PROJ_RCPT.gannett.includes(k)); return on; }
   static KEYS = ['water','recharge','traffic','taxes','farmland','openspace','downtown','housing'];
   static L = {
     en: {
@@ -707,8 +855,10 @@ class Component extends DCLogic {
         { key:'hailey', label:'Mayor Burke and the Hailey City Council', detail:'Martha Burke, Kaz Thea, Sage Sauerbrey, Dustin Stone, Juan Martinez' },
         { key:'record', label:'Hailey Community Development (official record)', detail:'planning@haileycityhall.org — the case file the council and P&Z rely on' },
         { key:'county', label:'Blaine County Land Use', detail:'The county sets the area of city impact and can still weigh in' },
-        { key:'bellevue', label:'Mayor Giordani and the Bellevue Council', detail:'The southern 119 acres are aimed at Bellevue next' }
+        { key:'bellevue', label:'Mayor Giordani and the Bellevue Council', detail:'Christina Giordani, Diane Shay, Suzanne Wrede, Genoa Beiser, Tammy Davis, Tom Bergin, Anders Ard, Brian Parker' }
       ],
+      projects: [ { key:'blaine', label:'Blaine Crossing', detail:'Oppenheimer · 614 units · City of Hailey decides' }, { key:'gannett', label:'Gannett Ranch', detail:'Steadfast · 452 units · City of Bellevue decides' } ],
+      needProject: 'Pick at least one project.',
       greet: ['Mayor Burke and members of the Hailey City Council,', 'Mayor Burke, Mayor Giordani, and members of the Hailey and Bellevue city councils,'],
       subject: ['Please deny the Blaine Crossing annexation', 'Public comment: Blaine Crossing annexation (Flying Hat Ranch)', 'Vote no on Blaine Crossing', 'Blaine Crossing is not in Hailey\u2019s interest'],
       open: [
@@ -756,6 +906,34 @@ class Component extends DCLogic {
         'I\u2019m asking you to deny this annexation. Please make this comment part of the official record for the application.',
         'Hailey does not have to annex this land. Please say no, and please add my comment to the record.'
       ],
+      greetG: ['Mayor Giordani and members of the Bellevue City Council,'],
+      greetB: ['Mayor Burke, Mayor Giordani, and members of the Hailey and Bellevue city councils,'],
+      subjectG: ['Please deny the Gannett Ranch annexation', 'Public comment: Steadfast Company annexation request (Gannett Ranch)', 'Vote no on Gannett Ranch', 'Gannett Ranch is not in Bellevue\u2019s interest'],
+      subjectB: ['Please deny the Blaine Crossing and Gannett Ranch annexations', 'Public comment: two annexations, one valley', 'Vote no on both annexations', 'Two annexations Hailey and Bellevue cannot absorb'],
+      openG: [
+        'My name is {name} and I live in {town}. I\u2019m writing to ask you to deny Steadfast Company\u2019s request to annex 191 acres of farmland south of Bellevue for the project they call Gannett Ranch.',
+        'I\u2019m a {town} resident writing about the Gannett Ranch proposal. Please vote no on annexing 191 acres south of town into Bellevue.',
+        'Steadfast Company filed its annexation request with Bellevue in late August. I want my objection on the record before it reaches you. Please deny the annexation.'
+      ],
+      openB: [
+        'My name is {name} and I live in {town}. I\u2019m writing to both councils about the two annexations now in front of you: Oppenheimer\u2019s Blaine Crossing in Hailey and Steadfast\u2019s Gannett Ranch in Bellevue. Please deny them both.',
+        'I\u2019m a {town} resident writing about Blaine Crossing and Gannett Ranch together, because the valley will live with them together. Please vote no on both annexations.',
+        'Two developers are asking two councils to annex nearly 300 acres of farmland between Hailey and the south end of Bellevue, more than 1,000 homes in all. I want my objection to both on the record.'
+      ],
+      genericG: 'Four hundred fifty-two homes, self-storage, and 150,000 square feet of flex industrial on 191 acres of productive farmland a mile and a half south of downtown is not growth Bellevue can absorb. Under county zoning that land holds about 39 houses. The city would have to prove it can supply the water and sewer, and it has not.',
+      genericB: 'Together these two projects put more than 1,000 homes, a hotel, self-storage, and over 400,000 square feet of industrial space on farmland at the south end of the valley. Roughly 2,800 more people and 2,100 more cars on a two-lane highway. The people who already live here will carry those costs.',
+      closeG: ['Please vote no on the Gannett Ranch annexation, and please include this letter in the public record.', 'I\u2019m asking you to deny this annexation. Please make this comment part of the official record for the application.', 'Bellevue does not have to annex this land. Please say no, and please add my comment to the record.'],
+      closeB: ['Please vote no on both annexations, and please include this letter in the public record for each application.', 'I\u2019m asking each council to deny the annexation in front of it. Please make this comment part of the official record.', 'Neither city has to annex this land. Please say no, and please add my comment to the record.'],
+      reasonsG: {
+        water: 'Water is my biggest concern. Our basin is already over-allocated. In 2021 the state ordered 140 irrigators on 23,000 acres of the Bellevue Triangle to stop pumping, and Silver Creek closed to fishing for the first time. Gannett Ranch sits in the middle of that ground. Adding 452 homes and 150,000 square feet of industrial space that depend on Bellevue\u2019s wells is not responsible.',
+        recharge: 'Irrigated farmland is the second-largest source of water going back into this aquifer. Gannett Ranch is 191 acres of it. Paving that field and switching its water to year-round municipal use means less water going in and more coming out, twelve months a year instead of four and a half.',
+        traffic: 'Gannett Ranch alone adds hundreds of cars to Highway 75 south of Bellevue, and with Blaine Crossing the two projects put roughly 2,100 more vehicles on the same two-lane road through town. Main Street Bellevue is the highway. It cannot absorb that.',
+        taxes: 'Annexation means Gannett Ranch hooks into Bellevue\u2019s water, sewer, and streets. The city has to verify it can serve that capacity, and nobody has shown Bellevue residents what it costs us if it can\u2019t. Until that number exists, the answer has to be no.',
+        farmland: 'This is 191 acres of productive farmland. Under current county zoning it could hold about 39 homes. Annexation turns 39 into 452. Once it\u2019s paved, it doesn\u2019t come back.',
+        openspace: 'The farmland south of Bellevue is why the town still has an edge. It\u2019s wildlife habitat, a fire break, and the view that tells you you\u2019re home. A civic center and an amphitheater are not a substitute.',
+        downtown: 'A market, commercial space, and a civic center a mile and a half south of Main Street compete directly with the businesses downtown Bellevue already has. We should be filling the storefronts we\u2019ve got, not building a second town center.',
+        housing: 'I understand the argument that we need housing. But nothing built here will be priced for the people who work here, about 1,330 units are already approved across the valley, and 1,940 platted lots are still sitting empty. This isn\u2019t about need. It\u2019s about what the developer can sell.'
+      },
       thanks: 'Thank you',
       fallbackTown: 'the Wood River Valley', fallbackName: '[your name]',
       needName: 'Add your name and a working email so your comment counts.',
@@ -765,7 +943,7 @@ class Component extends DCLogic {
       success: 'Your letter went to {n} people, and a copy went to the official record. Now the part that actually moves votes: get one more person to do the same.',
       successMail: 'Your mail app should be open with the letter and every address filled in. Hit send there. Then get one more person to do the same.',
       copyLink: 'Copy the link', copied: 'Copied', copyBody: 'Copy my letter text', copiedBody: 'Letter copied',
-      smsText: 'Hailey is about to decide on 614 homes between Hailey and Bellevue. Takes 2 minutes to email the council: ',
+      smsText: 'Hailey and Bellevue are deciding on 1,066 new homes at the south end of the valley. Takes 2 minutes to email the councils: ',
       count: '{n} letters sent so far', subscribe: 'Sign up', subscribed: 'You\u2019re on the list', subFail: 'Enter a valid email', subNoEndpoint: 'Alerts aren\u2019t connected yet',
       toCount: 'to {n} addresses'
     },
@@ -775,8 +953,10 @@ class Component extends DCLogic {
         { key:'hailey', label:'La alcaldesa Burke y el Concejo de Hailey', detail:'Martha Burke, Kaz Thea, Sage Sauerbrey, Dustin Stone, Juan Martinez' },
         { key:'record', label:'Desarrollo Comunitario de Hailey (registro oficial)', detail:'planning@haileycityhall.org: el expediente que usan el concejo y la comisión' },
         { key:'county', label:'Uso de Suelo del condado de Blaine', detail:'El condado define el área de impacto y aún puede opinar' },
-        { key:'bellevue', label:'La alcaldesa Giordani y el Concejo de Bellevue', detail:'Los 119 acres del sur van a Bellevue después' }
+        { key:'bellevue', label:'La alcaldesa Giordani y el Concejo de Bellevue', detail:'Christina Giordani, Diane Shay, Suzanne Wrede, Genoa Beiser, Tammy Davis, Tom Bergin, Anders Ard, Brian Parker' }
       ],
+      projects: [ { key:'blaine', label:'Blaine Crossing', detail:'Oppenheimer · 614 viviendas · decide Hailey' }, { key:'gannett', label:'Gannett Ranch', detail:'Steadfast · 452 viviendas · decide Bellevue' } ],
+      needProject: 'Elige al menos un proyecto.',
       greet: ['Alcaldesa Burke y miembros del Concejo Municipal de Hailey:', 'Alcaldesa Burke, alcaldesa Giordani y miembros de los concejos de Hailey y Bellevue:'],
       subject: ['Por favor nieguen la anexión de Blaine Crossing', 'Comentario público: anexión Blaine Crossing (rancho Flying Hat)', 'Voten no a Blaine Crossing', 'Blaine Crossing no le conviene a Hailey'],
       open: [
@@ -824,6 +1004,34 @@ class Component extends DCLogic {
         'Les pido que nieguen esta anexión. Por favor hagan de este comentario parte del registro oficial de la solicitud.',
         'Hailey no tiene que anexar este terreno. Por favor digan no, y agreguen mi comentario al registro.'
       ],
+      greetG: ['Alcaldesa Giordani y miembros del Concejo Municipal de Bellevue:'],
+      greetB: ['Alcaldesa Burke, alcaldesa Giordani y miembros de los concejos de Hailey y Bellevue:'],
+      subjectG: ['Por favor nieguen la anexión de Gannett Ranch', 'Comentario público: solicitud de anexión de Steadfast Company (Gannett Ranch)', 'Voten no a Gannett Ranch', 'Gannett Ranch no le conviene a Bellevue'],
+      subjectB: ['Por favor nieguen las anexiones de Blaine Crossing y Gannett Ranch', 'Comentario público: dos anexiones, un solo valle', 'Voten no a las dos anexiones', 'Dos anexiones que Hailey y Bellevue no pueden absorber'],
+      openG: [
+        'Me llamo {name} y vivo en {town}. Les escribo para pedirles que nieguen la solicitud de Steadfast Company de anexar 191 acres de tierra agrícola al sur de Bellevue para el proyecto que llaman Gannett Ranch.',
+        'Soy residente de {town} y les escribo sobre la propuesta Gannett Ranch. Por favor voten no a la anexión de 191 acres al sur del pueblo a Bellevue.',
+        'Steadfast Company presentó su solicitud de anexión a Bellevue a fines de agosto. Quiero que mi objeción quede en el registro antes de que llegue a ustedes. Por favor nieguen la anexión.'
+      ],
+      openB: [
+        'Me llamo {name} y vivo en {town}. Les escribo a los dos concejos sobre las dos anexiones que tienen enfrente: Blaine Crossing de Oppenheimer en Hailey y Gannett Ranch de Steadfast en Bellevue. Por favor nieguen las dos.',
+        'Soy residente de {town} y escribo sobre Blaine Crossing y Gannett Ranch juntos, porque el valle vivirá con los dos juntos. Por favor voten no a ambas anexiones.',
+        'Dos desarrolladores les piden a dos concejos anexar casi 300 acres de tierra agrícola entre Hailey y el extremo sur de Bellevue, más de 1,000 viviendas en total. Quiero que mi objeción a ambas quede en el registro.'
+      ],
+      genericG: 'Cuatrocientas cincuenta y dos viviendas, bodegas y 150,000 pies cuadrados industriales sobre 191 acres de tierra agrícola productiva, a milla y media del centro, no es un crecimiento que Bellevue pueda absorber. Con la zonificación del condado ese terreno admite unas 39 casas. La ciudad tendría que demostrar que puede dar agua y alcantarillado, y no lo ha hecho.',
+      genericB: 'Juntos, estos dos proyectos ponen más de 1,000 viviendas, un hotel, bodegas y más de 400,000 pies cuadrados industriales sobre tierra agrícola en el extremo sur del valle. Unas 2,800 personas más y 2,100 autos más en una carretera de dos carriles. Quienes ya vivimos aquí cargaremos con esos costos.',
+      closeG: ['Por favor voten no a la anexión de Gannett Ranch, e incluyan esta carta en el registro público.', 'Les pido que nieguen esta anexión. Por favor hagan de este comentario parte del registro oficial de la solicitud.', 'Bellevue no tiene que anexar este terreno. Por favor digan no, y agreguen mi comentario al registro.'],
+      closeB: ['Por favor voten no a las dos anexiones, e incluyan esta carta en el registro público de cada solicitud.', 'Le pido a cada concejo que niegue la anexión que tiene enfrente. Por favor hagan de este comentario parte del registro oficial.', 'Ninguna de las dos ciudades tiene que anexar este terreno. Por favor digan no, y agreguen mi comentario al registro.'],
+      reasonsG: {
+        water: 'El agua es mi mayor preocupación. Nuestra cuenca ya está sobreasignada. En 2021 el estado ordenó a 140 regantes en 23,000 acres del Triángulo de Bellevue dejar de bombear, y Silver Creek cerró a la pesca por primera vez. Gannett Ranch está en medio de ese terreno. Sumar 452 viviendas y 150,000 pies cuadrados industriales que dependen de los pozos de Bellevue no es responsable.',
+        recharge: 'La tierra agrícola de riego es la segunda fuente de agua que vuelve a este acuífero. Gannett Ranch son 191 acres de ella. Pavimentar ese campo y cambiar su agua a uso municipal todo el año significa menos agua entrando y más saliendo, doce meses al año en vez de cuatro y medio.',
+        traffic: 'Gannett Ranch por sí solo suma cientos de autos a la carretera 75 al sur de Bellevue, y con Blaine Crossing los dos proyectos ponen unos 2,100 vehículos más en el mismo camino de dos carriles que cruza el pueblo. La Main Street de Bellevue es la carretera. No aguanta eso.',
+        taxes: 'Anexar significa que Gannett Ranch se conecta al agua, alcantarillado y calles de Bellevue. La ciudad debe verificar que puede dar ese servicio, y nadie le ha mostrado a los residentes de Bellevue cuánto nos cuesta si no puede. Mientras no exista esa cifra, la respuesta tiene que ser no.',
+        farmland: 'Son 191 acres de tierra agrícola productiva. Con la zonificación actual del condado cabrían unas 39 casas. La anexión convierte 39 en 452. Una vez pavimentada, no vuelve.',
+        openspace: 'La tierra agrícola al sur de Bellevue es la razón por la que el pueblo todavía tiene un límite. Es hábitat de fauna, cortafuegos y la vista que te dice que llegaste a casa. Un centro cívico y un anfiteatro no lo sustituyen.',
+        downtown: 'Un mercado, comercios y un centro cívico a milla y media de Main Street compiten directamente con los negocios que el centro de Bellevue ya tiene. Deberíamos llenar los locales que existen, no construir un segundo centro.',
+        housing: 'Entiendo el argumento de que necesitamos vivienda. Pero nada de lo que se construya aquí tendrá precios para la gente que trabaja aquí, ya hay unas 1,330 unidades aprobadas en el valle y 1,940 lotes trazados siguen vacíos. Esto no es por necesidad. Es por lo que el desarrollador puede vender.'
+      },
       thanks: 'Gracias',
       fallbackTown: 'el Wood River Valley', fallbackName: '[tu nombre]',
       needName: 'Agrega tu nombre y un correo válido para que tu comentario cuente.',
@@ -833,19 +1041,18 @@ class Component extends DCLogic {
       success: 'Tu carta llegó a {n} personas y una copia quedó en el registro oficial. Ahora lo que de verdad mueve votos: consigue que una persona más haga lo mismo.',
       successMail: 'Tu app de correo debería estar abierta con la carta y todas las direcciones. Envíala desde ahí. Luego consigue que una persona más haga lo mismo.',
       copyLink: 'Copiar el enlace', copied: 'Copiado', copyBody: 'Copiar el texto de mi carta', copiedBody: 'Carta copiada',
-      smsText: 'Hailey está por decidir sobre 614 viviendas entre Hailey y Bellevue. Toma 2 minutos escribirle al concejo: ',
+      smsText: 'Hailey y Bellevue están decidiendo sobre 1,066 viviendas nuevas en el sur del valle. Toma 2 minutos escribir a los concejos: ',
       count: '{n} cartas enviadas hasta ahora', subscribe: 'Anotarme', subscribed: 'Ya estás en la lista', subFail: 'Escribe un correo válido', subNoEndpoint: 'Las alertas aún no están conectadas',
       toCount: 'a {n} direcciones'
     }
   };
 
-  state = { lang: null, reasons: [], name: '', email: '', town: '', personal: '', alerts: true, rcpt: { hailey: true, record: true, county: true, bellevue: true }, bodyOverride: null, status: 'idle', sentVia: null, error: '', copied: false, copiedBody: false, alertEmail: '', subStatus: 'idle', localSent: 0 };
+  state = { lang: null, reasons: [], name: '', email: '', town: '', personal: '', alerts: true, projects: { blaine: true, gannett: false }, rcpt: { hailey: true, record: true, county: true, bellevue: false }, bodyOverride: null, status: 'idle', sentVia: null, error: '', copied: false, copiedBody: false, alertEmail: '', subStatus: 'idle', localSent: 0 };
 
   get lang() { return this.state.lang || this.props.defaultLang || 'en'; }
   get L() { return Component.L[this.lang]; }
 
   componentDidMount() {
-    if (this.props.bellevueDefault === false) this.setState(s => ({ rcpt: { ...s.rcpt, bellevue: false } }));
     this.observe();
     this._tick = setInterval(() => this.forceUpdate(), 60000);
     this._onScroll = () => {
@@ -875,7 +1082,7 @@ class Component extends DCLogic {
     const d = this.meetingDate(); if (!d) return '#';
     const f = x => x.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
     const end = new Date(d.getTime() + 150 * 60000);
-    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Save Our Valley//EN', 'BEGIN:VEVENT', 'UID:hailey-council-' + f(d) + '@saveourvalley.com', 'DTSTAMP:' + f(new Date()), 'DTSTART:' + f(d), 'DTEND:' + f(end), 'SUMMARY:Hailey City Council meeting (Blaine Crossing)', 'LOCATION:Hailey City Hall\\, 115 S. Main St.\\, Hailey\\, ID', 'DESCRIPTION:Show up. Council members count the room. saveourvalley.com', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Save Our Valley//EN', 'BEGIN:VEVENT', 'UID:hailey-council-' + f(d) + '@saveourvalley5b.org', 'DTSTAMP:' + f(new Date()), 'DTSTART:' + f(d), 'DTEND:' + f(end), 'SUMMARY:Hailey City Council meeting (Blaine Crossing)', 'LOCATION:Hailey City Hall\\, 115 S. Main St.\\, Hailey\\, ID', 'DESCRIPTION:Show up. Council members count the room. saveourvalley5B.org', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
     return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
   }
 
@@ -914,19 +1121,22 @@ class Component extends DCLogic {
     const r = this.state.rcpt, R = Component.R;
     return ['hailey','record','county','bellevue'].filter(k => r[k]).flatMap(k => R[k]);
   }
+  mode() { const p = this.state.projects; return p.blaine && p.gannett ? 'B' : p.gannett ? 'G' : ''; }
   buildBody() {
-    const L = this.L, s = this.state;
+    const L = this.L, s = this.state, m = this.mode();
     this._seed = this.hash((s.name + '|' + s.email).toLowerCase());
     const nm = s.name.trim() || L.fallbackName, town = s.town || L.fallbackTown;
-    const parts = [L.greet[s.rcpt.bellevue ? 1 : 0], this.pick(L.open, 0).replace('{name}', nm).replace('{town}', town)];
-    if (s.reasons.length) s.reasons.forEach((k, i) => parts.push(this.pick(L.reasons[k], i + 1)));
-    else parts.push(L.generic);
+    const greet = m ? L['greet' + m][0] : L.greet[0];
+    const parts = [greet, this.pick(L['open' + m], 0).replace('{name}', nm).replace('{town}', town)];
+    const para = (k, i) => { if (m === 'G') return L.reasonsG[k]; if (m === 'B' && i % 2 === 1) return L.reasonsG[k]; return this.pick(L.reasons[k], i + 1); };
+    if (s.reasons.length) s.reasons.forEach((k, i) => parts.push(para(k, i)));
+    else parts.push(L['generic' + m]);
     if (s.personal.trim()) parts.push(s.personal.trim());
-    parts.push(this.pick(L.close, s.reasons.length + 3));
+    parts.push(this.pick(L['close' + m], s.reasons.length + 3));
     parts.push(L.thanks + ',\n' + nm + '\n' + town);
     return parts.join('\n\n');
   }
-  subject() { this._seed = this.hash((this.state.name + '|' + this.state.email).toLowerCase()); return this.pick(this.L.subject, 9); }
+  subject() { this._seed = this.hash((this.state.name + '|' + this.state.email).toLowerCase()); return this.pick(this.L['subject' + this.mode()], 9); }
 
   validEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e.trim()); }
 
@@ -940,7 +1150,7 @@ class Component extends DCLogic {
   utm() { const q = new URLSearchParams(location.search), o = {}; ['utm_source','utm_medium','utm_campaign','utm_content','fbclid'].forEach(k => { if (q.get(k)) o[k] = q.get(k); }); return Object.keys(o).length ? o : null; }
   payload(body, subject) {
     const s = this.state;
-    return { type: 'letter', name: s.name.trim(), email: s.email.trim(), town: s.town, reasons: s.reasons, subject, body, to: this.selectedAddresses(), alerts: s.alerts, lang: this.lang, page: location.href.split('#')[0], utm: this.utm(), website: s.website, turnstile: this._tsToken || null, ts: new Date().toISOString() };
+    return { type: 'letter', projects: Object.keys(s.projects).filter(k => s.projects[k]), name: s.name.trim(), email: s.email.trim(), town: s.town, reasons: s.reasons, subject, body, to: this.selectedAddresses(), alerts: s.alerts, lang: this.lang, page: location.href.split('#')[0], utm: this.utm(), website: s.website, turnstile: this._tsToken || null, ts: new Date().toISOString() };
   }
   mountTurnstile() {
     const key = (this.props.turnstileSiteKey || '').trim();
@@ -954,6 +1164,7 @@ class Component extends DCLogic {
 
   async send() {
     const L = this.L, s = this.state;
+    if (!s.projects.blaine && !s.projects.gannett) return this.setState({ error: L.needProject });
     if (!s.name.trim() || !this.validEmail(s.email)) return this.setState({ error: L.needName });
     if (!this.selectedAddresses().length) return this.setState({ error: L.needRcpt });
     const body = s.bodyOverride ?? this.buildBody(), subject = this.subject();
@@ -1000,6 +1211,7 @@ class Component extends DCLogic {
       const on = s.reasons.includes(k), full = !on && s.reasons.length >= 3, c = on ? sel : full ? dim : un;
       return { key: k, label: Component.L[l].labels[k], on, ...c, toggle: () => { if (full) return; this.flashPreview(); this.setState(st => ({ reasons: on ? st.reasons.filter(x => x !== k) : [...st.reasons, k] })); } };
     });
+    const mkProj = l => Component.L[l].projects.map(p => { const on = !!s.projects[p.key], c = on ? sel : un; return { ...p, on, ...c, toggle: () => { this.flashPreview(); this.setState(st => { const projects = { ...st.projects, [p.key]: !st.projects[p.key] }; return { projects, rcpt: Component.derivedRcpt(projects), bodyOverride: null }; }); } }; });
     const mkRcpt = l => Component.L[l].rcpt.map(r => ({ ...r, on: !!s.rcpt[r.key], toggle: () => { this.flashPreview(); this.setState(st => ({ rcpt: { ...st.rcpt, [r.key]: !st.rcpt[r.key] } })); } }));
     const addrs = this.selectedAddresses();
     const body = s.bodyOverride ?? this.buildBody();
@@ -1011,7 +1223,7 @@ class Component extends DCLogic {
       wide: s.wide !== false, stickyPos: s.wide === false ? 'static' : 'sticky',
       headerCta: s.wide === false ? (lang === 'es' ? 'Escribir' : 'Email them') : (lang === 'es' ? 'Escribe al concejo' : 'Email the council'),
       setEn: () => this.setState({ lang: 'en', bodyOverride: null }), setEs: () => this.setState({ lang: 'es', bodyOverride: null }),
-      reasonsEn: mkReasons('en'), reasonsEs: mkReasons('es'), recipientsEn: mkRcpt('en'), recipientsEs: mkRcpt('es'),
+      reasonsEn: mkReasons('en'), reasonsEs: mkReasons('es'), projectsEn: mkProj('en'), projectsEs: mkProj('es'), recipientsEn: mkRcpt('en'), recipientsEs: mkRcpt('es'),
       name: s.name, email: s.email, town: s.town, personal: s.personal, alerts: s.alerts,
       website: s.website || '', setWebsite: e => this.setState({ website: e.target.value }),
       setName: e => this.setState({ name: e.target.value }), setEmail: e => this.setState({ email: e.target.value }),
@@ -1021,7 +1233,7 @@ class Component extends DCLogic {
       subject: this.subject(), toPreview: addrs.join(', '), toCountText: L.toCount.replace('{n}', addrs.length),
       showForm: s.status !== 'sent', showSuccess: s.status === 'sent', sending: s.status === 'sending',
       sendLabel: s.status === 'sending' ? L.sending : L.sendLabel, hasError: !!s.error, errorMsg: s.error,
-      send: () => this.send(), openMail: () => this.openMail(), sendAnother: () => this.setState({ status: 'idle', bodyOverride: null, personal: '', reasons: [], name: '', email: '' }),
+      send: () => this.send(), openMail: () => this.openMail(), sendAnother: () => this.setState({ status: 'idle', bodyOverride: null, personal: '', reasons: [], name: '', email: '', projects: { blaine: true, gannett: false }, rcpt: Component.derivedRcpt({ blaine: true, gannett: false }) }),
       successText: (s.sentVia === 'mail' ? L.successMail : L.success).replace('{n}', addrs.length),
       smsHref, copyLink: () => this.copy(location.href.split('#')[0], 'copied'), copyLabel: s.copied ? L.copied : L.copyLink,
       copyBody: () => this.copy(body, 'copiedBody'), copyBodyLabel: s.copiedBody ? L.copiedBody : L.copyBody,
